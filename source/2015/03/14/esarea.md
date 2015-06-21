@@ -1,0 +1,25 @@
+---
+title: "esarea"
+category: release_note/2015/03/14
+tags: ChromeExtension
+created_at: 2015-03-14 20:47:47 +0900
+updated_at: 2015-03-24 20:56:54 +0900
+published: true
+---
+
+# 今回のリリース内容
+
+esaのmarkdown入力補助をgithub.comや他のサービスのテキストエリア上でも使えるようにするために、[esarea](https://chrome.google.com/webstore/detail/esarea/pjhancoeamcahkmbmgoonbaggjbpijoc) というchrome extensionを作成しました。
+
+[![](https://cloud.githubusercontent.com/assets/1041857/6638390/d80e5d2a-c9c8-11e4-9e8e-242844b05ec8.gif)](https://cloud.githubusercontent.com/assets/1041857/6638390/d80e5d2a-c9c8-11e4-9e8e-242844b05ec8.gif)
+
+# 所感
+- esarea = esa + textarea #ﾄﾉｺﾄ
+- 久しぶりに開発合宿に来ていますが、esareaはその成果の一部です
+    - たまに環境を変えるといつも異常に集中できてよいですね
+
+---
+[ProTip] [Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!](/posts/73) 
+
+Enjoy "(\\( ⁰⊖⁰)/)"
+https://esa.io
