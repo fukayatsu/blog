@@ -1,0 +1,72 @@
+=list-float
+  list-style: none
+  +pie-clearfix
+  padding: 0
+  margin: 0
+  li
+    line-height: 1
+    padding:
+      right: 10px
+    margin:
+      right: 10px
+      bottom: 5px
+    float: left
+    border-right: 1px solid $line-color
+    i
+      font-size: 110%
+      color: $icon-color
+      margin-right: 3px
+    a
+      i
+        color: rgba($link-color, .5)
+      &:hover
+        text-decoration: none
+    &.disabled
+      color: rgba($text-color, .2)
+      i
+        color: rgba($icon-color, .2)
+      a
+        color: rgba($text-color, .2)
+        i
+          color: rgba($icon-color, .2)
+      .count-num
+        +opacity(.5)
+    .count-num
+      +relative(-1px)
+      margin-left: 4px
+      padding:
+        left: 8px
+        right: 8px
+        bottom: 1px
+    &.current
+      font-weight: bold
+      color: $text-color
+      i
+        color: $icon-color
+      a
+        color: $text-color
+        i
+          color: $icon-color
+  @media (max-width: $grid-float-breakpoint)
+    li
+      float: none
+      border: none
+      padding: 0
+      margin: 0
+        bottom: 10px
+
+.list-float
+  +list-float
+
+.list
+  li
+    margin:
+      top: 5px
+      bottom: 5px
+    list-style-type: disc
+    list-style-position: outside
+    margin-left: $margin
+    &:last-child
+      margin-bottom: 0
+    ul
+      margin-bottom: 0

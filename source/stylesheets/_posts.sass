@@ -1,0 +1,647 @@
+.posts-show, .posts-index, .revisions-index, .revisions-show
+  .container
+    width: 95%
+    margin-right: 50px
+  .row
+    margin: 0
+  .main-column
+    margin: 0
+    padding: 0
+    max-width: $width
+    word-wrap: break-word
+
+.post-body-wrapper, .post-index-wrapper
+  .main-column
+    float: left
+
+.posts-header
+  width: 100%
+  +clearfix
+.page-heading
+  width: 100%
+  padding-bottom: 15px
+  float: left
+  +relative
+  margin:
+    right: -1 * ($side-width + $margin)
+    bottom: 20px
+  .posts-title
+    margin-right: $side-width + $margin + $margin
+  .categories
+    margin-bottom: 5px
+  .title
+    font-size: 280%
+    margin-bottom: 20px
+    font-weight: normal
+    .hashtag
+      +relative
+    .count-num
+      font-size: 20px
+      padding-top: 5px
+      +relative($top: -5px)
+      margin-right: 5px
+      &:hover
+        color: white !important
+        background: $main-color
+    .btn
+      margin-left: 10px
+      +relative($top: -3px)
+    .link-with-icon
+      font-size: 40%
+      color: $sub-text-color
+      margin-left: 10px
+      +relative($top: 0px)
+      i
+        color: $icon-color
+        &.is-done
+          color: $link-color
+          +relative
+          &:after
+            content: ""
+            display: block
+            $size: 12px
+            width: $size
+            height: $size
+            +absolute
+            bottom: 0px
+            right: -2px
+            background:
+              image: image-url('icon-is-done.png')
+              repeat: no-repeat
+              size: $size
+        &:hover
+          color: $hover-color
+          cursor: pointer
+    a
+      &:hover
+        .btn
+          background: $hover-color
+          i
+            color: white
+        .link-with-icon
+          color: $hover-color
+          cursor: pointer
+          i
+            color: $hover-color
+    &.wip
+      color: $sub-text-color
+      a
+        color: $sub-text-color
+        &:hover
+          color: $hover-color
+      .emoji
+        +opacity(.5)
+    .emoji
+      +size(40px)
+  .feedback
+    > li
+      margin-bottom: 5px
+
+  .posts-action
+    list-style: none
+    float: right
+    +absolute(-20px, 0)
+    >li
+      +clearfix
+      border-bottom: 1px dotted $line-color
+      padding: 5px 0
+      &:last-child
+        border-bottom: none
+    .posts-revisions
+      float: left
+      i
+        font-style: normal
+        font-size: 150%
+      .count-num
+        +relative($top: -2px)
+    .posts-delete, .posts-archive
+      +relative($top: 10px)
+    .record
+      font-size: 95%
+      .circle-thumbnail-ms
+        float: left
+        margin-right: 10px
+      .info
+        overflow: hidden
+        line-height: 1.5
+    .record-message
+      display: block
+      color: rgba($text-color, .7)
+      font-size: 10px
+
+.code-filename
+  +border-top-radius(4px)
+  +relative
+  top: 4px
+  display: inline-block
+  padding: 3px 10px
+  background-color: $thin-gray
+  color: #888
+  font-size: 85%
+  line-height: 1.5
+  margin-bottom: -10px
+  i
+    color: $icon-color
+    margin-right: 4px
+
+@media (max-width: $grid-float-breakpoint)
+  .page-heading
+    margin-right: 0
+    float: none
+    .posts-title
+      margin-right: 0
+      float: none
+    .posts-action
+      +relative($right: 0)
+      margin-top: $margin
+      margin-left: 0
+      float: none
+
+#preview-body
+  .page-heading
+    min-height: 90px
+    .title
+      margin-bottom: 0
+      &.wip
+        .preview-bare-title
+          +opacity(.5)
+  .markdown_diff
+    display: none
+  &.diff-mode
+    .markdown
+      display: none
+    .markdown_diff
+      display: block
+
+.preview-content
+  +relative
+  img
+    max-width: 100%
+  .categories
+    padding-right: 100px
+
+.preview-caution
+  font-size: 300%
+  color: $disabled-text-color
+  text-align: center
+  line-height: 1.4
+  i
+    display: block
+    font-size: 300%
+
+.preview-caution-post-name
+  color: $sub-text-color
+  +opacity(.3)
+
+.posts-list
+  +index-list
+  padding: 0
+  >li
+    padding-bottom: 5px
+    min-height: 85px
+  .posts-header
+    +clearfix
+  .posts-footer
+    +pie-clearfix
+  .record
+    font-size: 100%
+    line-height: 1.2
+    color: $sub-text-color
+    float: right
+    margin-bottom: 10px
+  .author
+    display: inline
+    margin-right: 5px
+    font-size: 100%
+  .date
+    display: inline
+    font-size: 100%
+    @media (max-width: $grid-float-breakpoint)
+      display: block
+  .categories
+    font-size: 100%
+    margin-bottom: 3px
+  .title
+    font-size: 170%
+    margin-bottom: 5px
+    a
+      color: $text-color
+      &:hover
+        color: $hover-color
+        text-decoration: none
+        .count-num
+          text-decoration: none !important
+      &.btn
+        color: rgba(white, .9)
+        margin-right: 10px
+        margin-left: 5px
+        padding: 3px 8px
+        &:hover
+          color: white
+      &.edit, &.copy
+        margin-left: 3px
+        +relative($top: -3px)
+        i
+          color: $icon-color
+          font-size: 60%
+          &:hover
+            color: $hover-color
+      .count-num
+        margin-left: 0
+        margin-right: 7px
+        background: #ddd
+        color: rgba($text-color, .7)
+    .emoji
+      +size(24px)
+
+  .feedback
+    +feedback-no-text
+    float: left
+    margin-bottom: 10px
+    .feedback-comment
+      .count-num
+        top: 1px
+    @media (max-width: $grid-float-breakpoint)
+      >li
+        width: auto
+        float: left
+        border-right: 1px solid $line-color
+        margin-right: 10px
+        padding-right: 5px
+      .thumbnails-list
+        display: none
+  .notifier
+    +absolute
+    top: 5px
+    right: 5px
+  .record
+    font-size: 85%
+
+
+.post-list
+  .bare-name
+    font-weight: normal
+  &.wip, >.wip
+    .circle-thumbnail-m, .circle-thumbnail-ms
+      +opacity(.5)
+    .tags, .categories, .bare-name, .record, .hashtag
+      +opacity(.5)
+  .search-highlight
+    color: rgba($text-color, .8)
+    font-size: 95%
+    padding-bottom: $margin-inner
+    margin-left: 79px
+    strong
+      color: $text-color
+      background: $highlight-color
+      padding: 0 2px
+  .star-comment
+    margin:
+      top: 0
+      left: 84px
+      bottom: 10px
+
+@media (max-width: $grid-float-breakpoint)
+  .posts-list
+    .post-list
+      padding-bottom: 10px
+      .date
+        display: inline
+      .search-highlight
+        margin-left: 0
+        word-break: break-all
+
+.posts-edit-nav-tabs
+  display: none
+  margin-bottom: $margin
+
+.diff-preview
+  +absolute
+  top: 0
+  right: 0
+  text-align: right
+  display: none
+  color: $sub-text-color
+  i
+    color: $icon-color
+    font-size: 130%
+  label
+    +relative
+    z-index: 1
+    line-height: 1.6
+    &:hover
+      cursor: pointer
+      color: $text-color
+      i
+        color: $main-color
+  input
+    +relative
+    z-index: 2
+    margin-right: 2px
+  input:checked+label
+    color: $text-color !important
+    background-color: $thin-gray
+    i
+      color: $main-color
+.posts-edit
+  .diff-preview
+    display: block
+
+.posts-edit, .posts-new
+  .container
+    width: 95%
+  .posts-edit-container
+    width: 48%
+    &.is-left
+      float: left
+      margin-right: $margin
+    &.is-right
+      float: right
+  @media (max-width: $grid-float-breakpoint)
+    .posts-edit-nav-tabs
+      display: block
+    .container
+      width: 100%
+    .posts-edit-container
+      &.is-left
+        width: 100%
+      &.is-right
+        float: none
+        width: 100%
+  .form-posts-title
+    font-size: 140%
+    height: auto
+  .preview-content
+    overflow: scroll
+  .tags
+    margin-bottom: 0
+  .page-heading
+    margin-right: 0
+    float: none
+  .posts-title
+    margin-right: 0
+    float: none
+
+.post-template-select
+  margin-bottom: $margin-inner
+  $height: 46px
+  +relative
+  z-index: 1
+  @at-root
+    &__icon
+      +absolute
+      top: 10px
+      left: 15px
+      font-size: 24px
+      color: $icon-color
+      z-index: 2
+  .select2-container .select2-selection--single
+    height: $height !important
+    border-color: rgba(0, 0, 0, .25) !important
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    line-height: $height - 2px !important
+    font-size: 120%
+    color: $text-color !important
+    padding-left: 45px
+    background-color: $thin-gray
+    border-radius: 4px
+    box-shadow: white 0 1px 0 inset
+    font-weight: bold
+  .select2-container--default .select2-selection--single
+  .select2-container--default .select2-selection--single .select2-selection__arrow
+    height: $height
+    line-height: $height
+    width: 30px
+  .select2
+    input, select
+      outline: 0 !important
+  .select2-container--focus
+    display: none !important
+  .select2-results__option
+    padding: 10px 15px
+  .select2-container--default .select2-selection--single .select2-selection__arrow b
+    border-color: $icon-color transparent transparent transparent
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+    border-color: transparent transparent $icon-color transparent
+  .select2-container--default .select2-search--dropdown .select2-search__field
+    border: 1px solid $line-color !important
+  .select2-results__option
+    padding: 15px 10px !important
+
+.select2-dropdown
+  border: 1px solid rgba(0, 0, 0, .25) !important
+.select2-container--default .select2-selection--single .select2-selection__clear
+  margin-right: 10px
+  display: inline-block
+  $size: 16px
+  width: $size
+  height: $size
+  line-height: $size
+  text-align: center
+  color: #eee
+  background-color: $icon-color
+  +border-radius($size)
+  +relative
+  top: 15px
+  &:hover
+    background-color: $main-color
+.select2-results__options
+  max-height: 400px !important
+  li:last-child
+    +border-bottom-radius(4px)
+.select2-results__option
+  padding: 6px 15px !important
+  i
+    color: $icon-color !important
+    font-size: 140% !important
+    margin-right: 3px
+    +relative
+    top: 2px
+.select2-container--default .select2-search--dropdown .select2-search__field
+  border-color: $line-color !important
+  outline: 0 !important
+  &:focus
+    border-color: $input-border-focus !important
+    +box-shadow(rgba($input-border-focus, 1) 0 0 5px)
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+  background-color: $input-border-focus !important
+
+.post-body-wrapper
+  padding-bottom: 20px
+
+.post-aside
+  border-top: 3px solid $line-color
+  padding-top: $margin
+
+.toc
+  margin-top: $margin
+  font-size: 90%
+  .emoji
+    +size(17px)
+.toc-list
+  padding: 0
+  margin-left: 15px
+.toc-box
+  .anchor-item
+    line-height: 1.5
+    margin: 0
+      bottom: 7px
+    padding: 0
+    color: $icon-color
+  .anchor-item-h1
+  .anchor-item-h2
+    margin-left: 20px
+  .anchor-item-h3
+    margin-left: 40px
+  @media (max-width: $screen-md)
+    display: none
+
+.toc-close
+  margin-bottom: 10px
+  cursor: pointer
+  color: $link-color
+  font-weight: 600
+  &:hover
+    color: $hover-color
+  i
+    width: 14px
+  .fa
+    +relative($left: 5px)
+    &.fa-rotate-90
+      left: 0
+      top: 4px
+  display: none
+  @media (max-width: $screen-md)
+    display: block
+
+.post-notification
+  border:
+    bottom: 1px solid $line-color
+  padding:
+    bottom: 10px
+  .fa-bullhorn
+    font-size: 120%
+    color: $icon-color
+    margin:
+      left: 4px
+      right: 2px
+    +relative
+  .control-label
+    text-align: left
+.post-notification-form
+  padding-right: 0 !important
+
+.post-save
+  +clearfix
+  width: 360px
+  float: right
+.post-save__item
+.post-save__caption
+  text-align: center
+  line-height: 1.3
+  strong
+    display: block
+    font-size: 110%
+    margin:
+      bottom: 5px
+    color: $sub-text-color
+  .help-block
+    color: rgba($sub-text-color, .3)
+    font-size: 11px
+    margin: 0
+      top: 5px
+  i
+    font-size: 20px
+    color: $icon-color
+.post-save__wip, .post-save__shipit
+  +clearfix
+  float: left
+  width: 180px
+  margin-right: -1px
+  &:hover
+    strong
+      color: $hover-color
+    .help-block
+      color: $text-color
+.post-prev-next
+  +clearfix
+  font-size: 90%
+  .emoji
+    +size(17px)
+.post-prev-link
+  float: left
+  margin-bottom: $margin
+.post-next-link
+  float: right
+  margin-bottom: $margin
+
+.hashtag
+  color: $sub-text-color !important
+  margin-right: 7px
+  font-size: 50%
+  &a
+    &:hover
+      color: $hover-color !important
+
+.posts-title
+  -webkit-font-smoothing: antialiased
+
+.posts-editing-users
+  +border-radius(4px)
+  +balloon-bottom-border($border_color: #d6d6d6, $left: 20px, $size: 6px)
+  padding: 0 10px
+  margin-bottom: 15px
+  border: 1px dashed #d6d6d6
+  .circle-thumbnail-s
+    $size: 26px
+    height: $size
+    width: $size
+    +border-radius($size)
+    img
+      height: $size
+      width: $size
+      +border-radius($size)
+  @at-root
+    &__editing
+      float: left
+      margin-right: 10px
+      margin-top: 12px
+      color: $sub-text-color
+      line-height: 20px
+      font-weight: 600
+
+.post-search-help
+  margin-top: 130px
+
+@media (min-width: $grid-float-breakpoint)
+  .posts-edit-content.tab-content > .tab-pane
+    display: block
+
+@media (max-width: $grid-float-breakpoint)
+  .post-save__caption
+    display: none
+  .post-save, .post-save__item, .post-save__wip, .post-save__shipit
+    width: 100%
+  .posts-show, .posts-index, .revisions-index, .revisions-show
+    .container
+      width: 100%
+  .posts-show
+    .container
+      padding-right: 15px
+  .post-save
+    margin-top: 10px
+  .btn-wip, .btn-shipit
+    width: 100%
+  .btn-wip
+    +border-radius(0)
+    +border-top-radius(6px)
+  .btn-shipit
+    +border-radius(0)
+    +border-bottom-radius(6px)
+
+.right-column.toc
+  &.fixed
+    position: fixed
+    top: 0
+    right: 35px
+    overflow: scroll

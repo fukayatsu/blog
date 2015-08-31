@@ -1,0 +1,76 @@
+/* ==========================================================================
+/* forms
+/* --------------------------------------------------------------------------
+.form-control
+  +placeholder-color($input-placeholder-color)
+  &:focus
+    background: white
+  &.form-control-half
+    width: 50%
+
+.help-block
+  color: $sub-text-color
+  .label
+    margin: 0 3px
+
+.form-inline-large
+  $form-inline-large-height: 50px
+  .form-control, .btn
+    font-size: 150%
+    height: $form-inline-large-height
+
+.form-wrapper
+  padding: 0 100px 0 50px
+  @media (max-width: $grid-float-breakpoint)
+    padding: 0 20px
+
+.form-horizontal
+  .form-group
+    margin-left: -5px
+    margin-right: -5px
+
+.form-group
+  [class*="col-sm-"]
+    padding:
+      left: 5px
+      right: 5px
+
+.form-text-image-wrapper
+  border: 1px solid rgba(0,0,0,.2)
+  +border-radius(6px)
+  +transition-duration(.3s)
+  textarea
+    +border-radius(0)
+    +border-top-radius(5px)
+    border: none
+    &:focus
+      +box-shadow(none)
+      border: none
+  .post-image
+    background: $input-bg
+    +border-bottom-radius(5px)
+    padding: 8px 20px
+    color: $sub-text-color
+    border-top: 1px dotted $line-color
+    i
+      color: $icon-color
+      font-size: 120%
+      margin-right: 5px
+    strong
+      margin-right: 5px
+  .post-image-drag-and-drop
+    +transition-duration(.3s)
+    &:hover
+      cursor: pointer
+      color: $text-color
+      i
+        color: $hover-color
+  &.is-focus, .dz-drag-hover
+    border: 1px solid $input-border-focus
+    +box-shadow(rgba($input-border-focus, .7) 0 0 5px)
+    .post-image
+      background: desaturate(lighten($input-border-focus, 30%), 40%)
+
+.checkbox-inline
+  input
+    margin-top: 6px

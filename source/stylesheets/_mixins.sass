@@ -1,0 +1,352 @@
+// ==========================================================================
+// zurui-liner-gradient
+// --------------------------------------------------------------------------
+=gradient-top-lighten($color : #666, $lighten: 5%)
+  background-color: $color
+  +filter-gradient(lighten($color, $lighten), $color,vertical)
+  +background-image(linear-gradient(lighten($color,$lighten) 0%, $color 100%))
+
+=gradient-top-darken($color : #666, $darken: 5%)
+  background-color: $color
+  +filter-gradient(darken($color, $darken), $color,vertical)
+  +background-image(linear-gradient(darken($color,$darken) 0%, $color 100%))
+
+// ==========================================================================
+// alpha-gray-scale gradient
+// --------------------------------------------------------------------------
+=gradient-gray-scale($op-fff: .1, $op-000: .1)
+  +filter-gradient(rgba(255, 255, 255, $op-fff), rgba(0, 0, 0, $op-000),vertical)
+  +background-image(linear-gradient(rgba(255, 255, 255, $op-fff), rgba(0, 0, 0, $op-000) 100%))
+  background-image: linear-gradient(rgba(255, 255, 255, $op-fff), rgba(0, 0, 0, $op-000))
+
+// ==========================================================================
+// overlay transparent elements
+// --------------------------------------------------------------------------
+=op-000($op: 0.1)
+  background-color: rgba(0,0,0,$op)
+
+=op-fff($op: 0.1)
+  background-color: rgba(255,255,255,$op)
+
+// ==========================================================================
+// zurui-text-shadow
+// --------------------------------------------------------------------------
+=ts-fff($op: 0.5)
+  +text-shadow(rgba(255, 255, 255, $op) -1px 1px 0)
+
+=ts-000($op: 0.2)
+  +text-shadow(rgba(0, 0, 0, $op) 1px -1px 0)
+
+// ==========================================================================
+// zurui-box
+// --------------------------------------------------------------------------
+=box-deboss($border: .1, $shadow: .05, $highlight: .8)
+  border: 1px solid rgba(0,0,0,$border)
+  +box-shadow(rgba(0, 0, 0, $shadow) -1px 1px 2px inset, rgba(255, 255, 255, $highlight) -1px 1px 0)
+
+=box-emboss($border: .1, $shadow: .05, $highlight: .5)
+  border: 1px solid rgba(0,0,0,$border)
+  +box-shadow(rgba(0, 0, 0, $shadow) -1px 1px 0, rgba(255, 255, 255, $highlight) -1px 1px 0 inset)
+
+=box($op: .15)
+  +box-shadow(rgba(0, 0, 0, $op) 0 0 2px)
+
+// ==========================================================================
+// zurui-line
+// --------------------------------------------------------------------------
+=line-top($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) 0 1px 0 inset)
+  border-top: 1px solid rgba(0,0,0,$black)
+
+=line-bottom($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) 0 2px 0)
+  border-bottom: 2px solid rgba(0,0,0,$black)
+
+=line-left($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) -1px 0 0)
+  border-left: 1px solid rgba(0,0,0,$black)
+
+=line-right($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) -1px 0 0 inset)
+  border-right: 1px solid rgba(0,0,0,$black)
+
+=line-top-bottom($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) 0 2px 0 inset, rgba(255,255,255,$white) 0 2px 0)
+  border-top: 2px solid rgba(0,0,0,$black)
+  border-bottom: 2px solid rgba(0,0,0,$black)
+
+=line-left-right($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) -1px 0 0, rgba(255,255,255,$white) -1px 0 0 inset)
+  border-left: 1px solid rgba(0,0,0,$black)
+  border-right: 1px solid rgba(0,0,0,$black)
+
+=line-top-bottom-left-right($white: .5, $black: .1)
+  +box-shadow(rgba(255,255,255,$white) -2px 0 0, rgba(255,255,255,$white) -2px 0 0 inset, rgba(255,255,255,$white) 0 2px 0 inset, rgba(255,255,255,$white) 0 2px 0)
+  border-left: 2px solid rgba(0,0,0,$black)
+  border-right: 2px solid rgba(0,0,0,$black)
+  border-top: 2px solid rgba(0,0,0,$black)
+  border-bottom: 2px solid rgba(0,0,0,$black)
+
+// ==========================================================================
+// transform
+// --------------------------------------------------------------------------
+=transform($deg: 6deg)
+  -moz-transform: rotate($deg)
+  -webkit-transform: rotate($deg)
+  -o-transform: rotate($deg)
+  -ms-transform: rotate($deg)
+  transform: rotate($deg)
+
+// ==========================================================================
+// balloon
+// --------------------------------------------------------------------------
+=balloon-left($size: 6px, $color: #FFF, $top: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid transparent
+    border-right: $size solid $color
+    top: $top
+    left: -1 * $size * 2
+
+=balloon-left-border($size: 6px, $color: #FFF, $top: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-left($size, $color, $top)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid transparent
+    border-right: $size2 solid $border_color
+    top: $top - $border
+    left: -1 * $size2 * 2
+
+=balloon-right($size: 6px, $color: #FFF, $top: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-right: $size solid transparent
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    top: $top
+    right: -1 * $size * 2
+
+=balloon-right-border($size: 6px, $color: #FFF, $top: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-right($size, $color, $top)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-right: $size2 solid transparent
+    border-top: $size2 solid transparent
+    border-bottom: $size2 solid transparent
+    top: $top - $border
+    right: -1 * $size2 * 2
+
+=balloon-top($size: 6px, $color: #FFF, $left: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-top: $size solid transparent
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    top: -1 * $size * 2
+    left: $left
+
+=balloon-top-border($size: 6px, $color: #FFF, $left: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-top($size, $color, $left)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-top: $size2 solid transparent
+    border-left: $size2 solid transparent
+    border-right: $size2 solid transparent
+    top: -1 * $size2 * 2
+    left: $left - $border
+
+=balloon-bottom($size: 6px, $color: #FFF, $left: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-bottom: $size solid transparent
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    bottom: -1 * $size * 2
+    left: $left
+
+=balloon-bottom-border($size: 6px, $color: #FFF, $left: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  +balloon-bottom($size, $color, $left)
+  $size2 : $size + $border
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-bottom: $size2 solid transparent
+    border-left: $size2 solid transparent
+    border-right: $size2 solid transparent
+    bottom: -1 * $size2 * 2
+    left: $left - $border
+
+// ==========================================================================
+// font
+// --------------------------------------------------------------------------
+=main-font
+  font-family: $main-font
+=num-font
+  font-family: $num-font
+=num-font-logo
+  +num-font
+  letter-spacing: 0
+=fw-400
+  font-weight: 400
+=fw-600
+  font-weight: 600
+=fw-200
+  font-weight: 200
+=fw-300
+  font-weight: 300
+=fw-700
+  font-weight: 700
+
+// ==========================================================================
+// button
+// --------------------------------------------------------------------------
+= button($color: #48B1F2, $font-size: 16px, $text-color: white)
+  display: inline-block
+  background-origin: border-box
+  position: relative
+  font-weight: bold
+  +ts-000(.1)
+  +gradient-top-lighten($color, 5%)
+  +border-radius(4px)
+  +emboss-box($border: .1, $shadow: .1, $highlight: .2)
+  color: rgba($text-color, .9)
+  text-align: center
+  font-size: $font-size
+  padding: 0 ($font-size * 2)
+  height: $font-size * 3
+  line-height: $font-size * 3
+  i
+    font-size: 130%
+    margin-right: 5px
+    color: rgba($text-color, .5)
+  &:hover
+    +gradient-top-lighten(lighten($color, 5%), 5%)
+    text-decoration: none
+    color: $text-color
+    i
+      color: $text-color
+  &:active
+    +gradient-top-lighten($color, 5%)
+    top: 1px
+
+// ==========================================================================
+// basic styles
+// --------------------------------------------------------------------------
+
+=blockquote
+  font-size: 100%
+  color: $quote-text-color
+  border-left: 5px solid $line-color
+  margin-bottom: $margin
+  padding: 0 20px
+  p
+    margin: 10px 0 !important
+
+// ==========================================================================
+// adjustment
+// --------------------------------------------------------------------------
+=reset
+  margin: 0
+  padding: 0
+  +box-shadow(none)
+  border: none
+  background: none
+  > a
+    background: none
+    margin: 0
+    padding: 0
+    +box-shadow(none)
+    border: none
+
+// ==========================================================================
+// misc cheat
+// --------------------------------------------------------------------------
+=norepeat
+  background-repeat: no-repeat
+
+=relative($top: auto, $right: auto, $bottom: auto, $left: auto)
+  position: relative
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=absolute($top: auto, $right: auto, $bottom: auto, $left: auto)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=none
+  display: none
+
+=block
+  display: block
+
+=content
+  content: ""
+  display: block
+
+=nowrap
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+=hidden
+  overflow: hidden
+
+=opacity($op: .25)
+  filter: alpha(opacity= $op * 100)
+  -moz-opacity: $op
+  opacity: $op
+
+=placeholder-color($color)
+  +input-placeholder
+    color: $color
+
+=break-word
+  word-wrap: break-word
+  word-break: break-word
+
+=reset-list
+  +reset
+  > li
+    list-style: none
+    +reset
+
+=size($size)
+  width: $size
+  height: $size

@@ -1,0 +1,10 @@
+.breadcrumb
+  padding: 0
+  > li
+    a
+      color: #999
+      &:hover
+        color: $hover-color
+    &+li:before
+      content: "›\00a0"
+      color: $line-color

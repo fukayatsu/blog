@@ -1,0 +1,12 @@
+.sorter
+  +list-float
+  margin-bottom: $margin
+  font-size: 110%
+  li
+    &:first-child
+      padding-left: 10px
+      border-left: 1px solid $line-color
+    @media (max-width: $grid-float-breakpoint)
+      &:first-child
+        padding: 0
+        border: none
