@@ -1,15 +1,30 @@
 %aside.side-bar
-  %h2 Recent Articles
-  %ol
-    - blog.articles[0...10].each do |article|
-      %li
-        = link_to article.title, article
-        %span= article.date.strftime('%b %e')
-  %h2 Tags
-  %ol
-    - blog.tags.each do |tag, articles|
-      %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-  %h2 By Year
-  %ol
-    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      %li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+  %section.section
+    %h2.side-bar__heading
+      %i.fa.fa-file-text-o
+      Recent Articles
+    .side-bar__content
+      %ul.posts-list.side-bar__posts-list
+        - blog.articles[0...10].each do |article|
+          %li.post-list
+            %ul.categories
+              - categories = article.data.category.split('/')
+              - categories.each do |category|
+                %li= category
+            %h4.title
+              = link_to article, class: 'bare-name' do
+                = article.title
+            .date= article.date.strftime('%Y - %m - %d')
+  %section.section
+    %h2.side-bar__heading
+      %i.fa.fa-tag
+      Tags
+    %ol
+      - blog.tags.each do |tag, articles|
+        %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+  %section.section
+    -# XXX: by year は左側に出して month ごとの indexにしそうな気がする
+    %h2.side-bar__heading By Year
+    %ol
+      - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+        %li= link_to "#{year} (#{articles.size})", blog_year_path(year)

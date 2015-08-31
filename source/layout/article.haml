@@ -12,7 +12,7 @@
   %body.posts-show.sharing-post
     = partial 'partials/navbar'
     .body
-      .container
+      .container.row
         .posts-header
           .page-heading
             .posts-title
@@ -27,4 +27,4 @@
               %span.num<>= current_article.data.updated_at
         #main.main-column{:role => "main"}
           .markdown.post-body= yield
-        = partial 'partials/side_bar'
+        .right-column= partial 'partials/side_bar'
