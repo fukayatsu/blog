@@ -10,7 +10,8 @@
     = stylesheet_link_tag 'all', media: 'all'
   %body
     = partial 'partials/navbar'
-    .container
-      #main.main-column{:role => "main"}
-        .markdown.post-body= yield
-      = partial 'partials/side_bar'
+    .body.sharing-post
+      .container.row
+        #main.main-column{:role => "main"}
+          .markdown.post-body= yield
+        .right-column= partial 'partials/side_bar'

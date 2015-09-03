@@ -24,7 +24,9 @@
         %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
   %section.section
     -# XXX: by year は左側に出して month ごとの indexにしそうな気がする
-    %h2.side-bar__heading By Year
+    %h2.side-bar__heading
+      %i.fa.fa-calendar
+      Archive
     %ol
       - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
         %li= link_to "#{year} (#{articles.size})", blog_year_path(year)
