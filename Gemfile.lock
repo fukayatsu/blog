@@ -157,6 +157,7 @@ DEPENDENCIES
   middleman (~> 3.3.12)
   middleman-blog (~> 3.5.3)
   middleman-livereload
+  nokogiri
 
 BUNDLED WITH
    1.10.6
