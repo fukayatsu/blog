@@ -26,5 +26,5 @@
               Updated at
               %span.num<>= current_article.data.updated_at
         #main.main-column{:role => "main"}
-          .markdown.post-body= yield
+          .post-body.markdown= yield
         .right-column= partial 'partials/side_bar'
