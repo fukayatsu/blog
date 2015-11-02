@@ -21,16 +21,7 @@ per_page: 20
             %i.fa.fa-caret-right
 %ul.posts-list
   - page_articles.each_with_index do |article, i|
-    %li.post-list
-      %ul.categories
-        - categories = article.data.category.split('/')
-        - categories.each do |category|
-          %li= category
-      %h2.title
-        = link_to article, class: 'bare-name' do
-          = article.title
-      .record
-        %span.date= article.date.strftime('%Y - %m - %d')
+    = partial 'partials/article', locals: { article: article }
 - if paginate && num_pages > 1
   .pagenate
     Page
