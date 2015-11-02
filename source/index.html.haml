@@ -3,13 +3,22 @@ pageable: true
 per_page: 20
 ---
 - if paginate && num_pages > 1
-  %p
-    Page #{page_number} of #{num_pages}
-  - if prev_page
-    %p= link_to 'Previous page', prev_page
-- if paginate
-  - if next_page
-    %p= link_to 'Next page', next_page
+  .pagenate.is-top
+    Page
+    %span.num= page_number
+    of
+    %span.num= num_pages
+    - if prev_page
+      %p.pagenate__prev.link-with-icon
+        = link_to prev_page do
+          %i.fa.fa-caret-left
+          Previous
+    - if paginate
+      - if next_page
+        %p.pagenate__next.link-with-icon
+          = link_to next_page do
+            %i.fa.fa-caret-right
+            Next 
 %ul.posts-list
   - page_articles.each_with_index do |article, i|
     %li.post-list
@@ -23,10 +32,19 @@ per_page: 20
       .record
         %span.date= article.date.strftime('%Y - %m - %d')
 - if paginate && num_pages > 1
-  %p
-    Page #{page_number} of #{num_pages}
-  - if prev_page
-    %p= link_to 'Previous page', prev_page
-- if paginate
-  - if next_page
-    %p= link_to 'Next page', next_page
+  .pagenate
+    Page
+    %span.num= page_number
+    of
+    %span.num= num_pages
+    - if prev_page
+      %p.pagenate__prev.link-with-icon
+        = link_to prev_page do
+          %i.fa.fa-caret-left
+          Previous
+    - if paginate
+      - if next_page
+        %p.pagenate__next.link-with-icon
+          = link_to next_page do
+            %i.fa.fa-caret-right
+            Next 
