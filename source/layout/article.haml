@@ -21,7 +21,12 @@
               %ul.categories
                 - categories.each do |category|
                   %li= category
-              %h1.title= current_article.title
+              %h1.title
+                = current_article.title
+                - current_article.tags.each do |tag|
+                  = link_to tag_path(tag), class: 'hashtag' do
+                    = '#'
+                    = tag
             .published-time
               %i.fa.fa-share-square-o
               Updated at
