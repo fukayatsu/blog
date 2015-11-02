@@ -6,10 +6,8 @@ per_page: 20
   Articles tagged '#{tagname}'
 - if paginate && num_pages > 1
   = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
-%ul
+%ul.posts-list
   - page_articles.each_with_index do |article, i|
-    %li
-      = link_to article.title, article
-      %span= article.date.strftime('%b %e')
+    = partial 'partials/article', locals: { article: article }
 - if paginate && num_pages > 1
   = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
