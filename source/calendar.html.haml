@@ -2,15 +2,16 @@
 pageable: true
 per_page: 20
 ---
-%h1
-  Archive for
+%h2
+  %i.fa.fa-calendar
   - case page_type
   - when 'day'
-    = Date.new(year, month, day).strftime('%b %e %Y')
+    %span.num= Date.new(year, month, day).strftime('%b %e %Y')
   - when 'month'
-    = Date.new(year, month, 1).strftime('%b %Y')
+    %span.num= Date.new(year, month, 1).strftime('%b %Y')
   - when 'year'
-    = year
+    %span.num= year
+  %span.count-num= articles.count
 - if paginate && num_pages > 1
   = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
 %ul.posts-list
