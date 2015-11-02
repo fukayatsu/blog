@@ -2,40 +2,13 @@
 pageable: true
 per_page: 20
 ---
+
 - if paginate && num_pages > 1
-  .pagenate.is-top
-    Page
-    %span.num= page_number
-    of
-    %span.num= num_pages
-    - if prev_page
-      %p.pagenate__prev.link-with-icon
-        = link_to prev_page do
-          %i.fa.fa-caret-left
-          Previous
-    - if paginate
-      - if next_page
-        %p.pagenate__next.link-with-icon
-          = link_to next_page do
-            Next 
-            %i.fa.fa-caret-right
+  = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
+
 %ul.posts-list
   - page_articles.each_with_index do |article, i|
     = partial 'partials/article', locals: { article: article }
+
 - if paginate && num_pages > 1
-  .pagenate
-    Page
-    %span.num= page_number
-    of
-    %span.num= num_pages
-    - if prev_page
-      %p.pagenate__prev.link-with-icon
-        = link_to prev_page do
-          %i.fa.fa-caret-left
-          Previous
-    - if paginate
-      - if next_page
-        %p.pagenate__next.link-with-icon
-          = link_to next_page do
-            Next 
-            %i.fa.fa-caret-right
+  = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
