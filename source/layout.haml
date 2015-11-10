@@ -16,3 +16,18 @@
         #main.main-column{:role => "main"}
           .post-body= yield
         .right-column= partial 'partials/side_bar'
+    .footer
+      %p.footer__copyright
+        This page has been published from
+        = link_to 'esa.io', 'https://esa.io', target: '_blank'
+        ='.'
+        This template by esa LLC under a MIT licence.
+      %ul.footer__nav
+        %li=link_to 'Help', 'https://docs.esa.io/posts/18', target: '_blank'
+        %li=link_to 'Pricing', 'https://esa.io/pricing', target: '_blank'
+        %li=link_to 'Terms', 'https://docs.esa.io/posts/5', target: '_blank'
+        %li=link_to 'Privacy', 'https://docs.esa.io/posts/6', target: '_blank'
+        %li=link_to 'Act on Specified Commercial Transactions', 'https://docs.esa.io/posts/39', target: '_blank'
+        %li=link_to 'Documents', 'https://docs.esa.io/', target: '_blank'
+        %li=link_to 'Developers', 'https://docs.esa.io/#path=%2Fdev', target: '_blank'
+        %li=link_to 'Company', 'https://team.esa.io', target: '_blank'
