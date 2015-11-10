@@ -31,6 +31,11 @@ end
 
 page "/feed.xml", layout: false
 
+set :site_author, ''
+set :site_title, 'esa blog'
+set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
+
+
 ###
 # Compass
 ###

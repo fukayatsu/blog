@@ -7,7 +7,7 @@
     %meta{:content => "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}/
     %title
       #{current_article.title + ' - ' unless current_article.nil?}
-      esa blog
+      = site_title
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = stylesheet_link_tag 'all', media: 'all'
   %body.posts-show.sharing-post
