@@ -19,14 +19,20 @@
     %h2.side-bar__heading
       %i.fa.fa-tag
       Tags
-    %ol
+    %ol.side-bar__list
       - blog.tags.each do |tag, articles|
-        %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+        %li
+          = link_to tag_path(tag) do
+            = tag
+            %span.count-num= articles.size
   %section.section
     -# XXX: by year は左側に出して month ごとの indexにしそうな気がする
     %h2.side-bar__heading
       %i.fa.fa-calendar
       Archive
-    %ol
+    %ol.side-bar__list
       - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-        %li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+        %li
+          = link_to blog_year_path(year) do
+            = year
+            %span.count-num= articles.size
