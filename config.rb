@@ -83,6 +83,7 @@ activate :livereload
 #   end
 # end
 
+require 'lib/custom_emoji'
 require 'lib/markdown_html_filter'
 set :markdown_engine, :MarkdownHtmlFilter
 
