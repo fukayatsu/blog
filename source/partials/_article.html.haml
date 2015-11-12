@@ -1,0 +1,14 @@
+%li.post-list
+  %ul.categories
+    - categories = article.data.category.split('/')
+    - categories.each do |category|
+      %li= category
+  %h2.title
+    = link_to article, class: 'bare-name' do
+      = article.title
+    - article.tags.each do |tag|
+      = link_to tag_path(tag), class: 'hashtag' do
+        = '#'
+        = tag
+  .record
+    %span.date= article.date.strftime('%Y - %m - %d')

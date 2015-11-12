@@ -1,0 +1,36 @@
+.tori
+  a
+    display: block
+    width: 450px
+    height: 360px
+    margin: 0 auto 30px
+    img
+      width: 450px
+    background-image: image-url('shadow.svg')
+    background-repeat: no-repeat
+    background-position: 85px bottom
+    background-size: 280px
+    &:hover
+      padding-top: 30px
+      background-size: 350px
+      background-position: 50px bottom
+    &:active
+      background-position: 75px bottom
+      background-size: 300px
+      img
+        +rotate(5deg)
+  @media (max-width: $grid-float-breakpoint)
+    a
+      width: 100%
+      height: 240px
+      margin: 0 auto 20px
+      img
+        width: 300px
+      background-size: 200px
+      background-position: 45px bottom
+      &:hover
+        background-size: 240px
+        background-position: 30px bottom
+      &:active
+        background-size: 240px
+        background-position: 30px bottom

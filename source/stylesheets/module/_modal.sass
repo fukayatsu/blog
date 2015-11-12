@@ -1,0 +1,32 @@
+.modal-header
+  border: none
+  +relative
+  padding: 10px 50px 10px 20px
+  margin-bottom: $margin-inner
+  background: $thin-gray
+  .close
+    +absolute(15px, 10px)
+    span
+      font-size: 65%
+      font-weight: normal
+      margin-right: 5px
+      +relative(-3px)
+.modal-title
+  i
+    font-size: 120%
+    color: $icon-color
+    margin-right: 3px
+
+.modal-body
+  padding-top: $margin-inner
+  +clearfix
+  @media (min-width: $grid-float-breakpoint)
+    .form-group
+      margin:
+        left: 0px
+        right: 0px
+  .form-group
+    .help-block
+      margin-bottom: 5px
+.modal-content
+  border: 5px solid rgba(white, .3)

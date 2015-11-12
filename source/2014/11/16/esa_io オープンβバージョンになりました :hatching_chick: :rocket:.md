@@ -1,7 +1,7 @@
 ---
 title: "esa.io オープンβバージョンになりました :hatching_chick: :rocket:"
 category: release_note/2014/11/16
-tags: 
+tags: release
 created_at: 2014-11-16 22:50:34 +0900
 updated_at: 2014-11-17 02:44:35 +0900
 published: true

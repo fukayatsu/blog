@@ -1,0 +1,47 @@
+.sharing-post
+  .page-heading
+    padding-top: 10px
+    min-height: 100px
+  .container
+    margin-left: 0 !important
+    width: 100%
+  .footer
+    padding: $margin
+      bottom: $margin * 2
+  .page-heading
+    .title
+      .count-num
+        &:hover
+          background-color: rgba(0, 0, 0, .08)
+          color: $sub-text-color !important
+
+.navbar-published
+  $height: 50px
+  height: $height
+  background: $main-color
+  .navbar-brand
+    width: 100px
+    padding: 5px 0
+    margin:
+      left: 10px
+      right: 30px
+  p
+    color: white
+    font-size: 95%
+    font-weight: 200
+    margin:
+      top: 15px
+      right: $margin
+    >a
+      font-weight: 400
+      color: white
+
+.published-time
+  color: $sub-text-color
+  font-size: 80%
+  i
+    font-size: 120%
+    color: $icon-color
+    +relative(2px)
+  .num
+    margin-left: 5px

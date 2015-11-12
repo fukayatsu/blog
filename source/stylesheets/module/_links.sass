@@ -1,0 +1,57 @@
+// ==========================================================================
+// links
+// --------------------------------------------------------------------------
+.link-with-icon
+  i
+    color: rgba($link-color, .5)
+    margin-right: 2px
+    font-size: 120%
+    &.fa-caret-down
+      font-size: 90%
+  &:hover
+    text-decoration: none
+    i
+      color: $hover-color
+  .count-num
+    margin-left: 4px
+  &.gray
+    color: $sub-text-color
+    i
+      color: $icon-color
+    &:hover
+      color: $hover-color
+      i
+        color: rgba($hover-color, .5)
+  &.white
+    color: rgba(white, .9)
+    i
+      color: rgba(white, .5)
+    &:hover
+      color: white
+      i
+        color: white
+
+.link-toggle
+  text-align: right
+  a
+    color: $sub-text-color
+    font-size: 90%
+    &:hover
+      color: $hover-color
+      text-decoration: none
+    &.close
+      +opacity(1)
+      +text-shadow(none)
+      font-weight: normal
+
+.link-more
+  font-size: 90%
+
+.link
+  i
+    font-size: 120%
+    color: rgba($main-color, .5)
+  a
+    &:hover
+      i
+        text-decoration: none

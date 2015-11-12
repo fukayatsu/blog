@@ -12,7 +12,7 @@ activate :blog do |blog|
   # Matcher for blog source files
   blog.sources = '{year}/{month}/{day}/{title}'
   blog.taglink = 'tags/{tag}'
-  blog.layout = 'layout'
+  blog.layout = 'layout/article'
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   blog.year_link = '{year}.html'
@@ -30,6 +30,11 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+
+set :site_author, ''
+set :site_title, 'esa blog'
+set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
+
 
 ###
 # Compass
