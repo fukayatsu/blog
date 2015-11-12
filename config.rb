@@ -84,8 +84,8 @@ activate :livereload
 # end
 
 require 'lib/custom_emoji'
-require 'lib/markdown_html_filter'
-set :markdown_engine, :MarkdownHtmlFilter
+require 'lib/html_pipeline_template'
+set :markdown_engine, :HtmlPipeline
 
 set :haml, { ugly: true }
 
