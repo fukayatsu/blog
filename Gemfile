@@ -3,7 +3,10 @@ source 'http://rubygems.org'
 gem 'middleman'
 gem 'middleman-blog'
 gem 'middleman-livereload'
-gem 'nokogiri'
+
+gem 'html-pipeline'
+gem 'github-markdown'
+gem 'gemoji'
 
 # assets
 gem 'bootstrap-sass', require: false
@@ -12,6 +15,6 @@ gem 'font-awesome-middleman', require: false
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
-gem 'html2haml'
 
+gem 'rake'
 gem 'pry'
