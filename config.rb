@@ -83,6 +83,12 @@ activate :livereload
 #   end
 # end
 
+require 'lib/custom_emoji'
+require 'lib/markdown_html_filter'
+set :markdown_engine, :MarkdownHtmlFilter
+
+set :haml, { ugly: true }
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
