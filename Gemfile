@@ -5,8 +5,11 @@ gem 'middleman-blog'
 gem 'middleman-livereload'
 
 gem 'html-pipeline'
-gem 'github-markdown'
+gem 'redcarpet'
+gem 'rouge'
+gem 'github-linguist'
 gem 'gemoji'
+gem 'sanitize'
 
 # assets
 gem 'bootstrap-sass', require: false
