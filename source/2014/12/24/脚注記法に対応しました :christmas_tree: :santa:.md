@@ -1,0 +1,25 @@
+---
+title: "脚注記法に対応しました :christmas_tree: :santa:"
+category: release_note/2014/12/24
+tags: 
+created_at: 2014-12-24 23:40:11 +0900
+updated_at: 2015-06-10 10:47:37 +0900
+published: true
+---
+
+# 今回のリリース内容
+
+markdownの設定を見なおして、脚注記法とclosedなチーム内でのhtmlの埋め込みを有効にしました。 [^1] [^2]
+
+[^1]: https://docs.esa.io/posts/38.md を見ていただけると、実際の書き方がわかりやすいと思います。
+[^2]: tweetを埋め込んだりできます。
+
+# 所感
+世の中はクリスマスムードですが、あまり実感が無いです :dash: 
+
+---
+Enjoy "(\\( ⁰⊖⁰)/)"
+https://esa.io
+
+なお、ウィッシュリストはこちらから受け付けております #ﾄﾉｺﾄ
+http://www.amazon.co.jp/registry/wishlist/WNWEGOU2X5FS

@@ -1,0 +1,40 @@
+.tags
+  +clearfix
+  margin-bottom: 20px
+  list-style: none
+  padding: 0
+  > li
+    > a
+      display: block
+      border-bottom: 1px solid $line-color
+      padding: 10px
+      margin-bottom: 0
+      color: $text-color
+      .count-num
+        margin-left: 10px
+      &:before
+        content: "#"
+        margin-right: 5px
+        color: $icon-color
+      &:hover
+        text-decoration: none
+        color: $hover-color
+        background-color: $thin-gray
+        &:before
+          color: $main-color
+    &:first-child
+      > a
+        border-top: 3px solid $line-color
+    &:last-child
+      > a
+        border-bottom: 3px solid $line-color
+.tag
+  a
+    display: inline-block
+    color: $sub-text-color
+    &:hover
+      color: $hover-color
+    &:before
+      content: '#'
+      margin-right: 3px
+      color: rgba($sub-text-color, .3)

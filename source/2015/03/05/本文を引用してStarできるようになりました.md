@@ -1,0 +1,30 @@
+---
+title: "本文を引用してStarできるようになりました"
+category: release_note/2015/03/05
+tags: 
+created_at: 2015-03-05 20:53:37 +0900
+updated_at: 2015-03-15 18:34:03 +0900
+published: true
+---
+
+# 今回のリリース内容
+
+記事詳細ページで、範囲選択してStarボタンを押す、もしくは範囲選択してSキーを押すことで、引用しつつStarをすることができるようになりました。
+
+![comment-star2.gif](https://img.esa.io/uploads/production/pictures/105/6171/image/63785d2f69539bd0d4f9e2bd81be9b2e.gif)
+
+引用した部分は、現在のところStarボタンの横のStarしたユーザ一覧のポップアップ上と、自分のStar一覧画面で確認することができます。
+
+![ss_2015-03-05_20_49_25.png](https://img.esa.io/uploads/production/pictures/105/6172/image/2679d3a21e06ad2b2582864f3f837086.png)
+
+# 所感
+
+今日は築地でランチでした。刺身定食美味しかった "(\\( ⁰⊖⁰)/)"
+
+> [魚四季 （うおしき） - 築地/魚介料理・海鮮料理 [食べログ]](http://tabelog.com/tokyo/A1313/A131301/13002376/)
+
+---
+[ProTip] [Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!](/posts/73) 
+
+Enjoy "(\\( ⁰⊖⁰)/)"
+https://esa.io

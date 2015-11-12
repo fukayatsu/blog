@@ -1,0 +1,29 @@
+---
+title: "⌘+Sで一時保存"
+category: release_note/2014/12/10
+tags: 
+created_at: 2014-12-09 02:53:22 +0900
+updated_at: 2014-12-31 14:10:05 +0900
+published: true
+---
+
+# 今回のリリース内容
+
+新規投稿時・編集時に `⌘+S` (Windowsは `ctrl + S`) を押すと一時保存できるようになりました。
+
+![kuru-.gif](https://img.esa.io/uploads/production/pictures/105/1574/image/15f62dceb4fc87cd532c7ea48b8bc9df.gif)
+
+`⌘+S` された内容は、一時的にrevision に残り、 `Save as WIP` や `Ship It` のボタンを押したタイミングで1つの revision にまとめられます。
+
+~~↑記事を同時更新してしまった場合の自動merge機能のために、今はrevisionが消えないようになっています。将来的にはナニカ別の方法でまとめられる様になるかもしれません~~
+
+↑当初の挙動に戻しました
+
+# 所感
+
+自転車を3階まで担いで上がって下ろした途端に、腰がピキってなりました
+ぎっくり腰ってほどではないけど、イタイ (:３っ)∋
+
+---
+Enjoy "(\\( ⁰⊖⁰)/)"
+https://esa.io

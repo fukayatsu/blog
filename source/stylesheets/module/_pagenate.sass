@@ -1,0 +1,25 @@
+.pagenate
+  +relative
+  +clearfix
+  text-align: center
+  color: $sub-text-color
+  &__prev
+    +absolute
+    top: 0
+    left: 0
+    i
+      margin-right: 5px
+      +relative
+      top: 1px
+  &__next
+    +absolute
+    top: 0
+    right: 0
+    i
+      margin-left: 5px
+      +relative
+      top: 1px
+  &.is-top
+    margin-top: 10px
+    border-bottom: 1px solid $line-color
+    padding-bottom: 30px
