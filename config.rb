@@ -29,9 +29,12 @@ activate :blog do |blog|
   blog.page_link = 'page/{num}'
 end
 
-page "/feed.xml", layout: false
+ignore '/layout/article.html'
 
-set :site_author, ''
+page '/feed.xml', layout: false
+
+set :site_url, 'http://blog.example.com/'
+set :site_author, 'esa team'
 set :site_title, 'esa blog'
 set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
 

@@ -8,7 +8,7 @@
       #{current_article.title + ' - ' unless current_article.nil? }
       = site_title
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
-    = stylesheet_link_tag 'all', media: 'all'
+    = stylesheet_link_tag 'screen', media: 'all'
   %body
     = partial 'partials/navbar'
     .body.sharing-post
