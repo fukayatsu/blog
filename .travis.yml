@@ -9,28 +9,14 @@ env:
   - GIT_COMMITTER_EMAIL: fukayatsu@gmail.com
   - GIT_AUTHOR_NAME: fukayatsu
   - GIT_AUTHOR_EMAIL: fukayatsu@gmail.com
-before_script:
-  - pwd
-  - git clone --quiet https://github.com/fukayatsu/blog.git build
-  - pushd build
-  - pwd
-  - git checkout -b gh-pages
-  - git branch
-  - popd
-  - pwd
 script:
-  - pwd
-  - git branch
-  - bundle exec middleman build
+  - git clone --quiet -b gh-pages https://github.com/fukayatsu/blog.git build && bundle exec middleman build
 after_success:
-  - pwd
   - cd build
-  - git branch
-  - pwd
   - git add -A
   - git status
   - git commit -m 'Updated by Travis CI'
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/fukayatsu/blog.git gh-pages -f 2> /dev/null'
+  # - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/fukayatsu/blog.git gh-pages -f 2> /dev/null'
 branches:
   only:
     - master
