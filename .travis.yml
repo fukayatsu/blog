@@ -1,0 +1,27 @@
+---
+language: ruby
+cache: bundler
+sudo: false
+rvm: 2.2.3
+env:
+  global:
+  - GIT_COMMITTER_NAME: fukayatsu
+  - GIT_COMMITTER_EMAIL: fukayatsu@gmail.com
+  - GIT_AUTHOR_NAME: fukayatsu
+  - GIT_AUTHOR_EMAIL: fukayatsu@gmail.com
+  - secure: "ZrskeJF1bqrQWMSc8zH9P+09OqqR6AZnILmC+9vTH5de9v6HP+Vu9eat9xnNdSEoNUKEd6MeNAns7X/bLViXMSwiIO1fp2vzha9jzX6vkLmSucq73ZPuBV57FkXZ4uYOnfxr/+jMR8MvQymySG7CE1nNVJpF3X0xyEeaLB+GwJT+L67lQPBTkGAmpyExU1aUCDs3XPRenV4opUvAOHgiyN71tgViS5B6y+mE1eW35b9siCYZFsOGvYejmpB3ktMSLGGV/5B6S6jl24EcNJ9aEOMvJ1Gvc87VuX+yTe02VLL4ofkX2COfBORwlztVdxn0b6Q7J+/hpjublprZcZN/4qTERdRXs8q14sy1QJNs0qPU4XEhIRHwTnH/1/H4qYbsE+QiglQVbev0pjM/hKMDwFpA8BowMvkx1CfZ4xKbuZfrCIzTKuLFger/r0otUgsWikZ8XWemVeUusTa6oo87ldlchCZwreBRjfVxljTB1FEMftsDlmDvzqfnED0X/ENie63clDouXm06eBhPjSojwidUCiMkfapDQuDU5ApYtV+anRTHR1WK5oCQd3aCj6BWA7IskG3Fi0rFyVpJlor6YX5zSTOnRvvHSESBAa/iQcntbnUMz6gBjFQ7O+x2t5npQYjCnkatNZ/PaupdpelKVje3Sd4DZvh9hnw206ksbVg="
+before_script:
+  - git clone --quiet https://github.com/fukayatsu/blog.git build
+  - pushd build
+  - git checkout -b gh-pages
+  - popd
+script:
+  - bundle exec middleman build
+after_success:
+  - cd build
+  - git add -A
+  - git commit -m 'Update'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/fukayatsu/blog.git gh-pages 2> /dev/null'
+branches:
+  only:
+    - master
