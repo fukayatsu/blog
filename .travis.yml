@@ -13,14 +13,17 @@ before_script:
   - pwd
   - git clone --quiet https://github.com/fukayatsu/blog.git build
   - pushd build
+  - pwd
   - git checkout -b gh-pages
   - popd
+  - pwd
 script:
   - pwd
   - bundle exec middleman build
 after_success:
   - pwd
   - cd build
+  - pwd
   - git add -A
   - git status
   - git commit -m 'Updated by Travis CI'
