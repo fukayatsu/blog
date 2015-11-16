@@ -33,7 +33,7 @@ ignore '/layout/article.html'
 
 page '/feed.xml', layout: false
 
-set :site_url, 'http://blog.example.com/'
+set :site_url, 'http://blog-test.fukayatsu.com/'
 set :site_author, 'esa team'
 set :site_title, 'esa blog'
 set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
