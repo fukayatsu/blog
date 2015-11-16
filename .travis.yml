@@ -15,14 +15,17 @@ before_script:
   - pushd build
   - pwd
   - git checkout -b gh-pages
+  - git branch
   - popd
   - pwd
 script:
   - pwd
+  - git branch
   - bundle exec middleman build
 after_success:
   - pwd
   - cd build
+  - git branch
   - pwd
   - git add -A
   - git status
