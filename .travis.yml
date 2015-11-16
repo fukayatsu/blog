@@ -16,7 +16,7 @@ after_success:
   - git add -A
   - git status
   - git commit -m 'Updated by Travis CI'
-  # - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/fukayatsu/blog.git gh-pages -f 2> /dev/null'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/fukayatsu/blog.git gh-pages -f 2> /dev/null'
 branches:
   only:
     - master
