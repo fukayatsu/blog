@@ -10,13 +10,16 @@ env:
   - GIT_AUTHOR_NAME: fukayatsu
   - GIT_AUTHOR_EMAIL: fukayatsu@gmail.com
 before_script:
+  - pwd
   - git clone --quiet https://github.com/fukayatsu/blog.git build
   - pushd build
   - git checkout -b gh-pages
   - popd
 script:
+  - pwd
   - bundle exec middleman build
 after_success:
+  - pwd
   - cd build
   - git add -A
   - git status
