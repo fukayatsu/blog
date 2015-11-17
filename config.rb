@@ -79,12 +79,11 @@ end
 # Reload the browser automatically whenever files change
 activate :livereload
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def full_url(path)
+    URI.join(config[:site_url], URI.escape(path))
+  end
+end
 
 require 'lib/custom_emoji'
 require 'lib/html_pipeline_template'
