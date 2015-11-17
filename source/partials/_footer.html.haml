@@ -1,4 +1,8 @@
 .footer
+  .footer__brand
+    = link_to 'https://esa.io', target: '_blank' do
+      = image_tag('images/footer-logotype.svg', alt: 'esa', class: 'footer__logo')
+      %span.footer__tagline= 'Expertise Sharing Archives for motivated teams.'
   %ul.footer__nav
     %li=link_to 'Help', 'https://docs.esa.io/posts/18', target: '_blank'
     %li=link_to 'Pricing', 'https://esa.io/pricing', target: '_blank'
