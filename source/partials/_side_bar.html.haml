@@ -8,7 +8,7 @@
         - blog.articles[0...10].each do |article|
           %li.post-list
             %ul.categories
-              - categories = article.data.category.split('/')
+              - categories = article.data.category.to_s.split('/')
               - categories.each do |category|
                 %li= category
             %h4.title
