@@ -1,4 +1,11 @@
-- page_title = "#{current_article.title + ' - ' unless current_article.nil? } #{site_title}"
+:ruby
+  if current_article.nil?
+    page_title = site_title
+  else
+    page_title  = [current_article.data.category, current_article.title].join('/')
+    page_title += " - #{site_title}"
+  end
+
 %meta{charset: "utf-8"}/
 %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}/
 %meta{content: "width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}
