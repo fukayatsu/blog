@@ -9,6 +9,7 @@ activate :esa do |esa|
   esa.paginate = true
   # esa.per_page = 10
   # esa.page_link = 'page/{num}'
+  esa.tag_template = 'tag.html'
 end
 
 ignore '/layout/article.html'
