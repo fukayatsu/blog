@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'middleman'
-gem 'middleman-blog'
+gem 'middleman-esa', path: '/Users/fukayatsu/src/github.com/esaio/middleman-esa'
 gem 'middleman-livereload'
 
 gem 'html-pipeline'

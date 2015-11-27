@@ -1,3 +1,9 @@
+PATH
+  remote: /Users/fukayatsu/src/github.com/esaio/middleman-esa
+  specs:
+    middleman-esa (0.0.1)
+      middleman-core (~> 3.4.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -7,7 +13,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.8)
     autoprefixer-rails (6.1.0.1)
       execjs
       json
@@ -86,10 +91,6 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-blog (3.5.3)
-      addressable (~> 2.3.5)
-      middleman-core (~> 3.2)
-      tzinfo (>= 0.3.0)
     middleman-core (3.4.0)
       activesupport (~> 4.1)
       bundler (~> 1.1)
@@ -181,7 +182,7 @@ DEPENDENCIES
   html-pipeline
   jquery-middleman
   middleman
-  middleman-blog
+  middleman-esa!
   middleman-livereload
   pry
   rake
