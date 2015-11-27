@@ -2,13 +2,13 @@ xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   xml.title config[:site_title]
   xml.subtitle config[:site_subtitle]
-  xml.id full_url(blog.options.prefix.to_s)
-  xml.link 'href' => full_url(blog.options.prefix.to_s)
+  xml.id full_url(esa.options.prefix.to_s)
+  xml.link 'href' => full_url(esa.options.prefix.to_s)
   xml.link 'href' => full_url(current_page.path), 'rel' => 'self'
-  xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
+  xml.updated(esa.articles.first.date.to_time.iso8601) unless esa.articles.empty?
   xml.author { xml.name config[:site_author] }
 
-  blog.articles[0..5].each do |article|
+  esa.articles[0..5].each do |article|
     xml.entry do
       url = full_url(article.url)
       xml.title article.title
