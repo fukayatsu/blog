@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<meta content='release_note/2015/05/27/esa API v1をβ公開しました - esa blog' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='http://blog-test.fukayatsu.com/posts/2015/05/27/esa%20API%20v1%E3%82%92%CE%B2%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html' property='og:url'>
+<meta content='images/og-image.png' property='og:image'>
+<link href='images/favicon.ico' rel='shortcut icon'>
+<title>release_note/2015/05/27/esa API v1をβ公開しました - esa blog</title>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/stylesheets/screen.css" rel="stylesheet" media="all" />
+</head>
+<body class='posts-show sharing-post'>
+<nav class='navbar-published'>
+<a class="navbar-brand" href="/"><img alt="esa.io" class="navbar-brand__icon" src="/images/logo-toriatama.svg" />
+<span class='navbar-brand__title'>esa blog</span>
+</a></nav>
+
+<div class='body'>
+<div class='container row'>
+<div class='posts-header'>
+<div class='page-heading'>
+<div class='posts-title'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>05</li>
+<li>27</li>
+</ul>
+<h1 class='title'>
+esa API v1をβ公開しました
+</h1>
+</div>
+<div class='published-time'>
+<i class='fa fa-share-square-o'></i>
+Updated at<span class='num'>2015-06-16 08:08:29 +0000</span></div>
+</div>
+</div>
+<div class='main-column' id='main' role='main'>
+<div class='post-body markdown'><p><img src="https://img.esa.io/uploads/production/attachments/105/2015/05/27/2/e1754af1-06e7-4229-b9c6-1d3ae5344e2d.jpg" alt="api.jpg (42.4 kB)"></p>
+
+<h1>今回のリリース内容</h1>
+
+<p>本日 esa API v1をβ公開しました。<br>
+大変長らくお待たせしました。</p>
+
+<p>まずは記事APIとチームAPIを公開しましたが、今後もAPIで操作可能な対象を増やしていくつもりです。</p>
+
+<p><img src="https://img.esa.io/uploads/production/attachments/105/2015/05/24/1/879ec85c-1fd6-4a0c-940f-b9c44c11adb4.png" alt="ss 2015-05-24 at 23.06.28.png (374.8 kB)"></p>
+
+<p>APIについて、詳しくはこちらのドキュメントを御覧ください</p>
+
+<blockquote>
+<p><a target="_blank" href="/posts/102">dev/api/v1 - docs.esa.io</a> </p>
+</blockquote>
+
+<p>「ぜひこのAPIを追加してくれ！」や「このパラメータも欲しいんだけど」みたいなことがありましたら、ぜひ右下のFeedback formからお知らせ下さい。</p>
+
+<p>また、Rubyのesa API clientも先日から公開していますのでissueやpull-requestをお待ちしております。</p>
+
+<blockquote>
+<p><a target="_blank" href="https://github.com/esaio/esa-ruby">esaio/esa-ruby</a></p>
+</blockquote>
+
+<p>このgemの使い方はこんな感じです。</p>
+<div class="code-block">
+<div class="code-filename">
+<i class="fa fa-file-code-o"></i>ruby</div>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'esa'</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="no">Esa</span><span class="o">::</span><span class="no">Client</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">access_token: </span><span class="s2">"&lt;access_token&gt;"</span><span class="p">,</span> <span class="ss">current_team: </span><span class="s1">'foo'</span><span class="p">)</span>
+<span class="n">client</span><span class="p">.</span><span class="nf">teams</span>
+<span class="c1">#=&gt; GET /v1/teams</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">team</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">)</span>
+<span class="c1">#=&gt; GET /v1/teams/bar</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">posts</span>
+<span class="c1">#=&gt; GET /v1/teams/foo/posts</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">posts</span><span class="p">(</span><span class="ss">q: </span><span class="s1">'in:help'</span><span class="p">)</span>
+<span class="c1">#=&gt; GET /v1/teams/foo/posts?q=in%3Ahelp</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">current_team</span> <span class="o">=</span> <span class="s1">'foobar'</span>
+<span class="n">client</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#=&gt; GET /v1/teams/foobar/posts/1</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">create_post</span><span class="p">(</span><span class="ss">name: </span><span class="s1">'foo'</span><span class="p">)</span>
+<span class="c1">#=&gt; POST /v1/teams/foobar/posts</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">update_post</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">name: </span><span class="s1">'bar'</span><span class="p">)</span>
+<span class="c1">#=&gt; PATCH /v1/teams/foobar/posts/1</span>
+
+<span class="n">client</span><span class="p">.</span><span class="nf">delete_post</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#=&gt; DELETE /v1/teams/foobar/posts/1</span>
+</code></pre>
+</div>
+<h1>所感</h1>
+
+<p>APIを公開することで、esaの使い方の可能性が広がるのが楽しみです。<br>
+「うちのチームではこういうの作ったぜ！」という事例を是非お知らせください。</p>
+
+<p>APIのprivate βにご協力して頂いた皆様ありがとうございました。</p>
+
+<hr>
+
+<p>[ProTip] <a target="_blank" href="/posts/73">Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!</a> </p>
+
+<p>Enjoy "(\( ⁰⊖⁰)/)"<br>
+<a target="_blank" href="https://esa.io">https://esa.io</a></p></div>
+</div>
+<div class='right-column'><aside class='side-bar'>
+<section class='section'>
+<h2 class='side-bar__heading'>
+<i class='fa fa-file-text-o'></i>
+Recent Articles
+</h2>
+<div class='side-bar__content'>
+<ul class='posts-list side-bar__posts-list'>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>05</li>
+<li>27</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/05/27/esa API v1をβ公開しました.html">esa API v1をβ公開しました
+</a></h4>
+<div class='date'>2015 - 06 - 16</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>10</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/10/スライドのデザインを少し整えました.html">スライドのデザインを少し整えました
+</a></h4>
+<div class='date'>2015 - 06 - 16</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>03</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/03/コメントのタスクリストを簡単に更新できるようにしました.html">コメントのタスクリストを簡単に更新できるようにしました
+</a></h4>
+<div class='date'>2015 - 06 - 16</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2014</li>
+<li>12</li>
+<li>24</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2014/12/24/脚注記法に対応しました :christmas_tree: :santa:.html">脚注記法に対応しました :christmas_tree: :santa:
+</a></h4>
+<div class='date'>2015 - 06 - 10</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>02</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/02/タグで記事のstockとflowの指定ができるようになりました.html">タグで記事のstockとflowの指定ができるようになりました
+</a></h4>
+<div class='date'>2015 - 06 - 08</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>02</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/02/外部公開記事をHTTPS化しました.html">外部公開記事をHTTPS化しました
+</a></h4>
+<div class='date'>2015 - 06 - 08</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>06</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/06/記事が外部公開中であることを分かりやすくしました.html">記事が外部公開中であることを分かりやすくしました
+</a></h4>
+<div class='date'>2015 - 06 - 08</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>05</li>
+<li>30</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/05/30/通知設定 &amp; Email通知を追加しました.html">通知設定 ＆ Email通知を追加しました
+</a></h4>
+<div class='date'>2015 - 06 - 04</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>06</li>
+<li>01</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/06/01/フィードバックのメールをきれいにしました.html">フィードバックのメールをきれいにしました
+</a></h4>
+<div class='date'>2015 - 06 - 01</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>release_note</li>
+<li>2015</li>
+<li>05</li>
+<li>29</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/2015/05/29/チームに参加できるユーザーのemailドメインを制限することができるようになりました.html">チームに参加できるユーザーのemailドメインを制限することができるようになりました
+</a></h4>
+<div class='date'>2015 - 05 - 30</div>
+</li>
+</ul>
+</div>
+</section>
+<section class='section'>
+<h2 class='side-bar__heading'>
+<i class='fa fa-tag'></i>
+Tags
+</h2>
+<ol class='side-bar__list'>
+<li>
+<a href="/tags/release">release
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/editor">editor
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/markdown">markdown
+<span class='count-num'>2</span>
+</a></li>
+<li>
+<a href="/tags/tags">tags
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/仕様変更">仕様変更
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/chromeextension">ChromeExtension
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/stock">stock
+<span class='count-num'>1</span>
+</a></li>
+</ol>
+</section>
+</aside>
+</div>
+</div>
+</div>
+<div class='footer'>
+<div class='footer__brand'>
+<a target="_blank" href="https://esa.io"><img alt="esa" class="footer__logo" src="/images/footer-logotype.svg" />
+<span class='footer__tagline'>Expertise Sharing Archives for motivated teams.</span>
+</a></div>
+<ul class='footer__nav'>
+<li><a target="_blank" href="https://docs.esa.io/posts/18">Help</a></li>
+<li><a target="_blank" href="https://esa.io/pricing">Pricing</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/5">Terms</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/6">Privacy</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/39">Act on Specified Commercial Transactions</a></li>
+<li><a target="_blank" href="https://docs.esa.io/">Documents</a></li>
+<li><a target="_blank" href="https://docs.esa.io/#path=%2Fdev">Developers</a></li>
+<li><a target="_blank" href="https://team.esa.io">Company</a></li>
+</ul>
+<p class='footer__copyright'>
+This page has been published from
+<a target="_blank" href="https://esa.io">esa.io</a>
+.
+This template by esa LLC under a MIT licence.
+</p>
+</div>
+
+</body>
+</html>

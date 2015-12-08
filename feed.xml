@@ -5,16 +5,97 @@
   <id>http://blog-test.fukayatsu.com/</id>
   <link href="http://blog-test.fukayatsu.com/"/>
   <link href="http://blog-test.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2015-06-09T15:00:00+00:00</updated>
+  <updated>2015-06-16T08:08:29+00:00</updated>
   <author>
     <name>esa team</name>
   </author>
   <entry>
+    <title>esa API v1をβ公開しました</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/05/27/esa%20API%20v1%E3%82%92%CE%B2%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2015/05/27/esa%20API%20v1%E3%82%92%CE%B2%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
+    <published>2015-06-16T08:08:29+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
+    <author>
+      <name>esa team</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/05/27/2/e1754af1-06e7-4229-b9c6-1d3ae5344e2d.jpg" alt="api.jpg (42.4 kB)"&gt;&lt;/p&gt;
+
+&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
+
+&lt;p&gt;本日 esa API v1をβ公開しました。&lt;br&gt;
+大変長らくお待たせしました。&lt;/p&gt;
+
+&lt;p&gt;まずは記事APIとチームAPIを公開しましたが、今後もAPIで操作可能な対象を増やしていくつもりです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/05/24/1/879ec85c-1fd6-4a0c-940f-b9c44c11adb4.png" alt="ss 2015-05-24 at 23.06.28.png (374.8 kB)"&gt;&lt;/p&gt;
+
+&lt;p&gt;APIについて、詳しくはこちらのドキュメントを御覧ください&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a target="_blank" href="/posts/102"&gt;dev/api/v1 - docs.esa.io&lt;/a&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;「ぜひこのAPIを追加してくれ！」や「このパラメータも欲しいんだけど」みたいなことがありましたら、ぜひ右下のFeedback formからお知らせ下さい。&lt;/p&gt;
+
+&lt;p&gt;また、Rubyのesa API clientも先日から公開していますのでissueやpull-requestをお待ちしております。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://github.com/esaio/esa-ruby"&gt;esaio/esa-ruby&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;このgemの使い方はこんな感じです。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;div class="code-filename"&gt;
+&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;ruby&lt;/div&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;'esa'&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Esa&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;access_token: &lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;access_token&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;current_team: &lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;teams&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;team&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/bar&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;posts&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foo/posts&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;posts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;q: &lt;/span&gt;&lt;span class="s1"&gt;'in:help'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foo/posts?q=in%3Ahelp&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;current_team&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'foobar'&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foobar/posts/1&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;create_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; POST /v1/teams/foobar/posts&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;update_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; PATCH /v1/teams/foobar/posts/1&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;delete_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; DELETE /v1/teams/foobar/posts/1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1&gt;所感&lt;/h1&gt;
+
+&lt;p&gt;APIを公開することで、esaの使い方の可能性が広がるのが楽しみです。&lt;br&gt;
+「うちのチームではこういうの作ったぜ！」という事例を是非お知らせください。&lt;/p&gt;
+
+&lt;p&gt;APIのprivate βにご協力して頂いた皆様ありがとうございました。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
+&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
     <title>スライドのデザインを少し整えました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-09T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html</id>
+    <published>2015-06-16T08:08:08+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
@@ -75,57 +156,11 @@
 &lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>記事が外部公開中であることを分かりやすくしました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/06/%E8%A8%98%E4%BA%8B%E3%81%8C%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E4%B8%AD%E3%81%A7%E3%81%82%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E5%88%86%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/06/%E8%A8%98%E4%BA%8B%E3%81%8C%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E4%B8%AD%E3%81%A7%E3%81%82%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E5%88%86%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-05T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
-    <author>
-      <name>esa team</name>
-    </author>
-    <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
-
-&lt;h2&gt;共有中の記事はアイコンの表示で区別しました&lt;/h2&gt;
-
-&lt;p&gt;記事を外部公開している時に、記事詳細ページのShareアイコンの表示が変わるようになりました。&lt;br&gt;
-これにより、外部公開中の記事を不用意に更新するなどといった事故を防ぎやすくなります。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/06/1/87929629-97fe-4476-bd8b-5a570223d318.png" alt="ss 2015-06-06 18.58.55.png (64.1 kB)"&gt;&lt;/p&gt;
-
-&lt;p&gt;↑ 外部公開中の記事ではshareボタンにチェックマークが付きます。&lt;/p&gt;
-
-&lt;h2&gt;外部公開中の記事のみを絞り込んで検索できるようになりました&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/06/1/93db4291-3ce3-4c47-9587-610760e57bb9.png" alt="ss 2015-06-06 18.59.23.png (289.5 kB)"&gt;&lt;/p&gt;
-
-&lt;p&gt;↑ &lt;code&gt;sharing:true&lt;/code&gt; で検索すると、外部効果中の記事を絞り込むことができます&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;※記事の外部公開機能についてはこちらもご覧ください。&lt;br&gt;
-&lt;a target="_blank" href="https://docs.esa.io/posts/110"&gt;help/記事・スライドの外部公開のしかた - docs.esa.io&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1&gt;所感&lt;/h1&gt;
-
-&lt;p&gt;&lt;a target="_blank" href="http://www.nintendo.co.jp/wiiu/agmj/"&gt;Splatoon（スプラトゥーン）&lt;/a&gt;が面白くて止めるタイミングを見失いがちです&lt;/p&gt;
-
-&lt;p&gt;(\( ⁰⊖⁰)/)  くコ:彡&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://d3esbfg30x759i.cloudfront.net/pap/zlCfzTbVQZEhFRHyo6" alt=""&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
-
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
     <title>コメントのタスクリストを簡単に更新できるようにしました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-02T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
+    <published>2015-06-16T08:07:59+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
@@ -148,41 +183,51 @@
 &lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>外部公開記事をHTTPS化しました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/02/%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E8%A8%98%E4%BA%8B%E3%82%92HTTPS%E5%8C%96%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/02/%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E8%A8%98%E4%BA%8B%E3%82%92HTTPS%E5%8C%96%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-01T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
+    <title>脚注記法に対応しました :christmas_tree: :santa:</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2014/12/24/%E8%84%9A%E6%B3%A8%E8%A8%98%E6%B3%95%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%20:christmas_tree:%20:santa:.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2014/12/24/%E8%84%9A%E6%B3%A8%E8%A8%98%E6%B3%95%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%20:christmas_tree:%20:santa:.html</id>
+    <published>2015-06-10T01:47:37+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
     <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
 
-&lt;p&gt;セキュリティの向上のため、外部公開記事(esa-pages.io)でもHTTPSプロコトルを使用するようにしました。HTTPでのアクセスはHTTPSへリダイレクトされます。&lt;/p&gt;
-
-&lt;p&gt;また、今回の変更により外部公開記事が60秒間キャッシュ(※)されるようになりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/02/1/51a587cf-6645-44f4-9142-8ddc7685fa79.png" alt="ss 2015-06-02 at 0.42.40.png (103.8 kB)"&gt;&lt;/p&gt;
-
-&lt;p&gt;※ 2015-06-01 以前に外部公開した記事では300秒間キャッシュされることがありますが、記事を保存し直すと60秒間のキャッシュに切り替わります。&lt;/p&gt;
+&lt;p&gt;markdownの設定を見なおして、脚注記法とclosedなチーム内でのhtmlの埋め込みを有効にしました。 &lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h1&gt;所感&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src="https://d1zd1v0cxnbx2w.cloudfront.net/images/sets/sushiyuki/13.png" alt="寿司ゆき:sleep"&gt; &lt;/p&gt;
+&lt;p&gt;世の中はクリスマスムードですが、あまり実感が無いです &lt;img class="emoji" title=":dash:" alt=":dash:" src="/images/emoji/unicode/1f4a8.png" height="20" width="20" align="absmiddle"&gt; &lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
-
 &lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
+&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なお、ウィッシュリストはこちらから受け付けております #ﾄﾉｺﾄ&lt;br&gt;
+&lt;a target="_blank" href="http://www.amazon.co.jp/registry/wishlist/WNWEGOU2X5FS"&gt;http://www.amazon.co.jp/registry/wishlist/WNWEGOU2X5FS&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+
+&lt;li id="fn1"&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://docs.esa.io/posts/38.md"&gt;https://docs.esa.io/posts/38.md&lt;/a&gt; を見ていただけると、実際の書き方がわかりやすいと思います。 &lt;a href="#fnref1" rev="footnote"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li id="fn2"&gt;
+&lt;p&gt;tweetを埋め込んだりできます。 &lt;a href="#fnref2" rev="footnote"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/div&gt;</content>
   </entry>
   <entry>
     <title>タグで記事のstockとflowの指定ができるようになりました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-01T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html</id>
+    <published>2015-06-08T02:19:05+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
@@ -213,32 +258,27 @@
 &lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>フィードバックのメールをきれいにしました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/2015/06/01/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E3%81%8D%E3%82%8C%E3%81%84%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/2015/06/01/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E3%81%8D%E3%82%8C%E3%81%84%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-05-31T15:00:00+00:00</published>
-    <updated>2015-11-17T10:22:03+00:00</updated>
+    <title>外部公開記事をHTTPS化しました</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/02/%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E8%A8%98%E4%BA%8B%E3%82%92HTTPS%E5%8C%96%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/2015/06/02/%E5%A4%96%E9%83%A8%E5%85%AC%E9%96%8B%E8%A8%98%E4%BA%8B%E3%82%92HTTPS%E5%8C%96%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
+    <published>2015-06-08T00:59:03+00:00</published>
+    <updated>2015-12-08T07:19:20+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
     <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
 
-&lt;p&gt;esaから配信されるメールは、ずっと味気ないテキストメールのみだったのですが、やっとHTMLメールを導入しました。&lt;/p&gt;
+&lt;p&gt;セキュリティの向上のため、外部公開記事(esa-pages.io)でもHTTPSプロコトルを使用するようにしました。HTTPでのアクセスはHTTPSへリダイレクトされます。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/01/2/fc9b165d-8e14-47d6-9544-49a330a9cb41.png" alt="ss 2015-06-01 1.37.35.png (182.6 kB)"&gt;&lt;/p&gt;
+&lt;p&gt;また、今回の変更により外部公開記事が60秒間キャッシュ(※)されるようになりました。&lt;/p&gt;
 
-&lt;p&gt;まずは、私達が日頃とてもお世話になっている、皆さんからのフィードバック時に送られるThanksメールから、HTMLメールを導入しました。&lt;br&gt;
-右下のフィードバックフォームは、実はesaの記事と同様のMarkdownが使えるのですが、この内容もメールできれいに整形されて見れるようになりました。&lt;br&gt;
-引き続き、他のメールたちもHTMLメールにしていきます(\( ⁰⊖⁰)/)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/02/1/51a587cf-6645-44f4-9142-8ddc7685fa79.png" alt="ss 2015-06-02 at 0.42.40.png (103.8 kB)"&gt;&lt;/p&gt;
+
+&lt;p&gt;※ 2015-06-01 以前に外部公開した記事では300秒間キャッシュされることがありますが、記事を保存し直すと60秒間のキャッシュに切り替わります。&lt;/p&gt;
 
 &lt;h1&gt;所感&lt;/h1&gt;
 
-&lt;p&gt;HTMLメールはこのテンプレートをベースに作りました。&lt;br&gt;
-&lt;a target="_blank" href="http://zurb.com/playground/responsive-email-templates"&gt;Responsive Email Templates | Playground from ZURB&lt;/a&gt;&lt;br&gt;
-tableレイアウトつらいので、テンプレートあると楽でよいですね。&lt;/p&gt;
-
-&lt;p&gt;お昼ごはんは、渋谷の東急の地下のフードショーに行ってお惣菜を買いました。&lt;br&gt;
-温玉と素麺をジェル状のつゆで固めたものを買ったのですが、涼やかで今日のような暑い日にはとてもよかったです( ˘ω˘)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://d1zd1v0cxnbx2w.cloudfront.net/images/sets/sushiyuki/13.png" alt="寿司ゆき:sleep"&gt; &lt;/p&gt;
 
 &lt;hr&gt;
 
