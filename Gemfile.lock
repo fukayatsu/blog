@@ -1,7 +1,5 @@
-GIT
-  remote: git://github.com/fukayatsu/middleman-blog.git
-  revision: ebfa6ab759a9dba8ad7eeb9efff7f40a3886b26e
-  branch: esa-ext
+PATH
+  remote: /Users/fukayatsu/src/github.com/middleman/middleman-blog
   specs:
     middleman-blog (3.5.3)
       addressable (~> 2.3.5)

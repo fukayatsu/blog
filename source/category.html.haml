@@ -1,0 +1,16 @@
+---
+pageable: true
+per_page: 20
+---
+%h2
+  %i.fa.fa-tag
+  Category:
+  %strong= categoryname
+  %span.count-num= articles.count
+- if paginate && num_pages > 1
+  = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
+%ul.posts-list
+  - page_articles.each_with_index do |article, i|
+    = partial 'partials/article', locals: { article: article }
+- if paginate && num_pages > 1
+  = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
