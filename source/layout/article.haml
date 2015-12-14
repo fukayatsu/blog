@@ -10,7 +10,7 @@
           .page-heading
             .posts-title
               %ul.categories
-                - categories = current_article.data.category.split('/')
+                - categories = current_article.data.category.to_s.split('/')
                 - categories.each.with_index do |category, i|
                   %li= link_to category, category_path(categories[0..i].join('/'))
               %h1.title
