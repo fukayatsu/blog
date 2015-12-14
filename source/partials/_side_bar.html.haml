@@ -25,20 +25,13 @@
           = link_to tag_path(tag) do
             = tag
             %span.count-num= articles.size
-  -# %section.section
-  -#   -# XXX: by year は左側に出して month ごとの indexにしそうな気がする
-  -#   %h2.side-bar__heading
-  -#     %i.fa.fa-calendar
-  -#     Archive
-  -#   %ol.side-bar__list
-  -#     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-  -#       %li
-  -#         = link_to blog_year_path(year) do
-  -#           = year
-  -#           %span.count-num= articles.size
-  -#         %ol.side-bar__list
-  -#           - articles.group_by { |a| a.date.month }.each do |month, articles|
-  -#             %li
-  -#               = link_to blog_month_path(year, month) do
-  -#                 = '%02d' % month
-  -#                 %span.count-num= articles.size
+  %section.section
+    %h2.side-bar__heading
+      %i.fa.fa-folder-o
+      Category
+    %ol.side-bar__list
+      - blog.root_categories.each do |category, articles|
+        %li
+          = link_to category_path(category) do
+            = category
+            %span.count-num= articles.size

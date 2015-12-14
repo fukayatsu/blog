@@ -9,10 +9,10 @@
         .posts-header
           .page-heading
             .posts-title
-              -# XXX: カテゴリを分割する
               %ul.categories
-                - categories.each do |category|
-                  %li= category
+                - categories = current_article.data.category.split('/')
+                - categories.each.with_index do |category, i|
+                  %li= link_to category, category_path(categories[0..i].join('/'))
               %h1.title
                 = current_article.title
                 - current_article.tags.each do |tag|

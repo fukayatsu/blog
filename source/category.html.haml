@@ -3,10 +3,19 @@ pageable: true
 per_page: 20
 ---
 %h2
-  %i.fa.fa-tag
+  %i.fa.fa-folder-open-o
   Category:
   %strong= categoryname
   %span.count-num= articles.count
+
+%ol
+  - blog.child_categories_for(categoryname).each do |child_category, articles|
+    %li
+      = link_to category_path(child_category) do
+        %i.fa.fa-folder-o
+        = child_category.sub(/^#{categoryname}\//, '')
+        %span.count-num= articles.size
+
 - if paginate && num_pages > 1
   = partial 'partials/pagenate', locals: { page_number: page_number, num_pages: num_pages, prev_page: prev_page, next_page: next_page }
 %ul.posts-list
