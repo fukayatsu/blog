@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fukayatsu/middleman-blog.git
-  revision: ebfa6ab759a9dba8ad7eeb9efff7f40a3886b26e
+  revision: c9d4d22a956b56acea588204e5fc96e0593c4885
   branch: esa-ext
   specs:
     middleman-blog (3.5.3)
@@ -196,4 +196,4 @@ DEPENDENCIES
   sanitize
 
 BUNDLED WITH
-   1.10.6
+   1.11.0

@@ -11,13 +11,15 @@ activate :blog do |blog|
   blog.permalink = 'posts/{+title}'
   # Matcher for blog source files
   blog.sources = 'posts/{+title}'
-  blog.taglink = 'tags/{tag}'
+  blog.taglink = 'tags/{tag}.html'
+  blog.tag_template = 'tag.html'
+  blog.categorylink = 'categories/{category}.html'
+  blog.category_template = 'category.html'
   blog.layout = 'layout/article'
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   blog.default_extension = '.md'
 
-  blog.tag_template = 'tag.html'
 
   # Enable pagination
   blog.paginate = true
