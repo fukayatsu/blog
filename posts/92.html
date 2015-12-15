@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<meta content='release_note/2015/04/18/TeX記法で数式が書けるようになりました - esa blog' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='http://blog-test.fukayatsu.com/posts/92.html' property='og:url'>
+<meta content='images/og-image.png' property='og:image'>
+<link href='images/favicon.ico' rel='shortcut icon'>
+<title>release_note/2015/04/18/TeX記法で数式が書けるようになりました - esa blog</title>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/stylesheets/screen.css" rel="stylesheet" media="all" />
+</head>
+<body class='posts-show sharing-post'>
+<nav class='navbar-published'>
+<a class="navbar-brand" href="/"><img alt="esa.io" class="navbar-brand__icon" src="/images/logo-toriatama.svg" />
+<span class='navbar-brand__title'>esa blog</span>
+</a></nav>
+
+<div class='body'>
+<div class='container row'>
+<div class='posts-header'>
+<div class='page-heading'>
+<div class='posts-title'>
+<ul class='categories'>
+<li><a href="/categories/release_note.html">release_note</a></li>
+<li><a href="/categories/release_note/2015.html">2015</a></li>
+<li><a href="/categories/release_note/2015/04.html">04</a></li>
+<li><a href="/categories/release_note/2015/04/18.html">18</a></li>
+</ul>
+<h1 class='title'>
+TeX記法で数式が書けるようになりました
+</h1>
+</div>
+<div class='published-time'>
+<i class='fa fa-share-square-o'></i>
+Updated at<span class='num'>2015-04-20 05:42:56 +0000</span></div>
+</div>
+</div>
+<div class='main-column' id='main' role='main'>
+<div class='post-body markdown'><h1>今回のリリース内容</h1>
+<div class="code-block"><div class="mathjax">$$  e^{i \pi} = -1 
+ $$</div></div><div class="code-block">
+<pre class="highlight plaintext"><code>```math
+ e^{i \pi} = -1 
+```
+</code></pre>
+</div>
+<p>のように、<code>math</code>コードブロックを作ることで、<a target="_blank" href="https://www.mathjax.org/">MathJax</a>によって数式を描画することができるようになりました。<code>math</code>コードブロックでは、自動的に数式の前後に<code>$$</code>が挿入されます。</p>
+
+<p>ちなみに、</p>
+<div class="code-block">
+<pre class="highlight plaintext"><code>```tex
+e^{i \pi} = -1 
+```
+</code></pre>
+</div>
+<p>とすると、TeX記法のハイライトになります。</p>
+<div class="code-block">
+<div class="code-filename">
+<i class="fa fa-file-code-o"></i>tex</div>
+<pre class="highlight tex"><code>e<span class="p">^{</span>i <span class="k">\pi</span><span class="p">}</span> = -1 
+</code></pre>
+</div>
+<h2>サンプル</h2>
+
+<blockquote>
+<p><a target="_blank" href="http://genkuroki.web.fc2.com/#inline">MathJaxの使い方</a>より</p>
+</blockquote>
+
+<h3>inlineMath</h3>
+
+<p>$\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$</p>
+
+<p><code>$\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$</code></p>
+
+<h3>displayMath</h3>
+<div class="code-block"><div class="mathjax">$$ \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
+\tag{3}
+ $$</div></div><div class="code-block">
+<pre class="highlight plaintext"><code>```math
+\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
+\tag{3}
+```
+</code></pre>
+</div>
+<h3>AMSmath</h3>
+<div class="code-block"><div class="mathjax">$$ \begin{align*}
+ A &amp; = B \\
+   &amp; = C \\
+   &amp; = D.
+\end{align*}
+ $$</div></div><div class="code-block">
+<pre class="highlight plaintext"><code>```math
+\begin{align*}
+ A &amp; = B \\
+   &amp; = C \\
+   &amp; = D.
+\end{align*}
+```
+</code></pre>
+</div>
+<h3>AMSsymbols</h3>
+
+<p>$Q_1\boxtimes Q_2$, $\because$, $\dfrac12$, $\hslash$, $O(3)\ltimes{\mathbb R}$</p>
+
+<p><code>$Q_1\boxtimes Q_2$, $\because$, $\dfrac12$, $\hslash$, $O(3)\ltimes{\mathbb R}$</code></p>
+
+<h3>タイポ</h3>
+<div class="code-block"><div class="mathjax">$$ \sym_{n=1}^\infty \frac{1}{n^2} = \frac{\po^2}{6} 
+ $$</div></div><div class="code-block">
+<pre class="highlight plaintext"><code>```math
+\sym_{n=1}^\infty \frac{1}{n^2} = \frac{\po^2}{6} 
+```
+</code></pre>
+</div>
+<h3>マクロ</h3>
+
+<p>$$<br>
+  \newcommand\C{{\mathbb C}}<br>
+  \newcommand\np[2]{{#1}#2{#1}}<br>
+  \C[y_1,\ldots,y_n]\to {\mathcal A}, \quad a\mapsto\np{:}{a}<br>
+$$</p>
+<div class="code-block">
+<pre class="highlight plaintext"><code>$$
+  \newcommand\C{{\mathbb C}}
+  \newcommand\np[2]{{#1}#2{#1}}
+  \C[y_1,\ldots,y_n]\to {\mathcal A}, \quad a\mapsto\np{:}{a}
+$$
+</code></pre>
+</div>
+<h1>所感</h1>
+
+<p>お昼はサンドイッチを食べに行きました。<br>
+美味しかったのですが、厚みのあるサンドイッチは食べるのが難しいですね。</p>
+
+<blockquote>
+<p><a target="_blank" href="http://tabelog.com/tokyo/A1303/A130303/13164922/">キングジョージ （KING GEORGE） - 代官山/カフェ [食べログ]</a></p>
+</blockquote>
+
+<hr>
+
+<p>[ProTip] <a target="_blank" href="/posts/73">Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!</a> </p>
+
+<p>Enjoy "(\( ⁰⊖⁰)/)"<br>
+<a target="_blank" href="https://esa.io">https://esa.io</a></p></div>
+</div>
+<div class='right-column'><aside class='side-bar'>
+<section class='section'>
+<h2 class='side-bar__heading'>
+<i class='fa fa-file-text-o'></i>
+Recent Articles
+</h2>
+<div class='side-bar__content'>
+<ul class='posts-list side-bar__posts-list'>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/12.html">記法
+</a></h4>
+<div class='date'>2015 - 11 - 14</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/15.html">記事の書き方
+</a></h4>
+<div class='date'>2015 - 11 - 14</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/7.html">投稿テンプレート
+</a></h4>
+<div class='date'>2015 - 11 - 13</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/74.html">ご利用料金について
+</a></h4>
+<div class='date'>2015 - 11 - 11</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>ProTip</li>
+<li>2015</li>
+<li>01</li>
+<li>07</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/43.html">スクリプトタグの埋め込み
+</a></h4>
+<div class='date'>2015 - 11 - 11</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/49.html">Markdown記法
+</a></h4>
+<div class='date'>2015 - 11 - 11</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/25.html">esa.io 紹介記事
+</a></h4>
+<div class='date'>2015 - 11 - 10</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>ProTip</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/63.html">いろいろな(⁰⊖⁰)
+</a></h4>
+<div class='date'>2015 - 11 - 10</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/81.html">ファイルアップロード先に独自のS3 Bucketを設定する
+</a></h4>
+<div class='date'>2015 - 11 - 08</div>
+</li>
+<li class='post-list'>
+<ul class='categories'>
+<li>help</li>
+</ul>
+<h4 class='title'>
+<a class="bare-name" href="/posts/8.html">キーボードショートカット
+</a></h4>
+<div class='date'>2015 - 11 - 05</div>
+</li>
+</ul>
+</div>
+</section>
+<section class='section'>
+<h2 class='side-bar__heading'>
+<i class='fa fa-tag'></i>
+Tags
+</h2>
+<ol class='side-bar__list'>
+<li>
+<a href="/tags/chromeextension.html">ChromeExtension
+<span class='count-num'>2</span>
+</a></li>
+<li>
+<a href="/tags/editor.html">editor
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/markdown.html">markdown
+<span class='count-num'>2</span>
+</a></li>
+<li>
+<a href="/tags/tags.html">tags
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/tags/仕様変更.html">仕様変更
+<span class='count-num'>1</span>
+</a></li>
+</ol>
+</section>
+<section class='section'>
+<h2 class='side-bar__heading'>
+<i class='fa fa-folder-o'></i>
+Category
+</h2>
+<ol class='side-bar__list'>
+<li>
+<a href="/categories/help.html">help
+<span class='count-num'>16</span>
+</a></li>
+<li>
+<a href="/categories/release_note.html">release_note
+<span class='count-num'>60</span>
+</a></li>
+<li>
+<a href="/categories/no_category.html">no_category
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/categories/incident_reports.html">incident_reports
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/categories/templates.html">templates
+<span class='count-num'>3</span>
+</a></li>
+<li>
+<a href="/categories/ProTip.html">ProTip
+<span class='count-num'>5</span>
+</a></li>
+<li>
+<a href="/categories/dev.html">dev
+<span class='count-num'>1</span>
+</a></li>
+<li>
+<a href="/categories/policies.html">policies
+<span class='count-num'>3</span>
+</a></li>
+</ol>
+</section>
+</aside>
+</div>
+</div>
+</div>
+<div class='footer'>
+<div class='footer__brand'>
+<a target="_blank" href="https://esa.io"><img alt="esa" class="footer__logo" src="/images/footer-logotype.svg" />
+<span class='footer__tagline'>Expertise Sharing Archives for motivated teams.</span>
+</a></div>
+<ul class='footer__nav'>
+<li><a target="_blank" href="https://docs.esa.io/posts/18">Help</a></li>
+<li><a target="_blank" href="https://esa.io/pricing">Pricing</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/5">Terms</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/6">Privacy</a></li>
+<li><a target="_blank" href="https://docs.esa.io/posts/39">Act on Specified Commercial Transactions</a></li>
+<li><a target="_blank" href="https://docs.esa.io/">Documents</a></li>
+<li><a target="_blank" href="https://docs.esa.io/#path=%2Fdev">Developers</a></li>
+<li><a target="_blank" href="https://team.esa.io">Company</a></li>
+</ul>
+<p class='footer__copyright'>
+This page has been published from
+<a target="_blank" href="https://esa.io">esa.io</a>
+.
+This template by esa LLC under a MIT licence.
+</p>
+</div>
+
+</body>
+</html>

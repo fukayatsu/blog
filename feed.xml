@@ -5,267 +5,719 @@
   <id>http://blog-test.fukayatsu.com/</id>
   <link href="http://blog-test.fukayatsu.com/"/>
   <link href="http://blog-test.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2015-12-07T15:08:27+00:00</updated>
+  <updated>2015-11-14T03:18:00+00:00</updated>
   <author>
     <name>esa team</name>
   </author>
   <entry>
-    <title>README</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/README.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/README.html</id>
-    <published>2015-12-07T15:08:27+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
+    <title>記法</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/12.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/12.html</id>
+    <published>2015-11-14T03:18:00+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
-    <content type="html">&lt;p&gt;hoho&lt;/p&gt;</content>
+    <content type="html">&lt;h2&gt;Markdown記法について&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;esaの投稿の記法は基本的には、GitHub Flavored Markdown に似せてあります。&lt;/li&gt;
+&lt;li&gt;参考: &lt;a target="_blank" href="https://guides.github.com/features/mastering-markdown/"&gt;Mastering Markdown · GitHub Guides&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;esa独自の記法&lt;/h2&gt;
+
+&lt;p&gt;esa にはいくつかの独特なMarkdown拡張や記法があります。GitHubでできることは、割とできたりします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ]  &lt;code&gt;- [ ]&lt;/code&gt; &lt;code&gt;- [x]&lt;/code&gt; でチェックボックスが作れます。
+
+&lt;ul&gt;
+&lt;li&gt;[x] ネストもできます&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;フォームにDrag &amp;amp; Drop で画像が貼れます&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;:emoji:&lt;/code&gt; で  emoji が貼れます &lt;img class="emoji" title=":sushi:" alt=":sushi:" src="/images/emoji/unicode/1f363.png" height="20" width="20" align="absmiddle"&gt; &lt;img class="emoji" title=":hatched_chick:" alt=":hatched_chick:" src="/images/emoji/unicode/1f425.png" height="20" width="20" align="absmiddle"&gt; 
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a target="_blank" href="http://www.emoji-cheat-sheet.com/"&gt;Emoji cheat sheet for Campfire and GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;投稿タイトルで、 &lt;code&gt;category/category2/title&lt;/code&gt; とすると、カテゴリのディレクトリが切れる。これによって、あとからWikiのようにキレイに整理することができます。&lt;/li&gt;
+&lt;li&gt;投稿タイトルで、&lt;code&gt;#tag&lt;/code&gt; とするとタグが付けられます。&lt;/li&gt;
+&lt;li&gt;投稿ページのURLの末尾に &lt;code&gt;.md&lt;/code&gt; とつけると markdown 形式で出力します。
+
+&lt;ul&gt;
+&lt;li&gt; &lt;code&gt;https://hoge.esa.io/posts/123.md&lt;/code&gt; のようになります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;記事をスライドショーフォーマットで見ることができます。
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;code&gt;https://hoge.esa.io/posts/123/slides/&lt;/code&gt; のようなURLでスライドショーできます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;投稿フォームエリアで、&lt;code&gt;#&lt;/code&gt; と入力すると同じチームのesaの投稿へのリンクがサジェストされます。&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;@USERNAME&lt;/code&gt; で、メンションが送れます。メンションされると相手のユーザーに通知が送られます。&lt;/li&gt;
+&lt;/ul&gt;</content>
   </entry>
   <entry>
-    <title>esa API v1をβ公開しました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/05/27/esa%20API%20v1%E3%82%92%CE%B2%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/2015/05/27/esa%20API%20v1%E3%82%92%CE%B2%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-16T08:08:29+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
+    <title>記事の書き方</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/15.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/15.html</id>
+    <published>2015-11-14T03:16:48+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
     <author>
       <name>esa team</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/05/27/2/e1754af1-06e7-4229-b9c6-1d3ae5344e2d.jpg" alt="api.jpg (42.4 kB)"&gt;&lt;/p&gt;
+    <content type="html">&lt;h2&gt;全く新しい記事を書く&lt;/h2&gt;
 
-&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;左上の &lt;code&gt;NEW POST&lt;/code&gt; ボタンを押すと、新規投稿画面になります。&lt;/li&gt;
+&lt;li&gt;左上の &lt;code&gt;Select Template&lt;/code&gt; からテンプレートを選んで書けます。
 
-&lt;p&gt;本日 esa API v1をβ公開しました。&lt;br&gt;
-大変長らくお待たせしました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;テンプレートはプリセットされているものの他に、自由に設定できます。詳しくは &lt;a target="_blank" href="/posts/7"&gt;こちら&lt;/a&gt; をご覧ください。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;投稿の詳しい記法は &lt;a target="_blank" href="/posts/12"&gt;こちら&lt;/a&gt; をご覧ください。&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;まずは記事APIとチームAPIを公開しましたが、今後もAPIで操作可能な対象を増やしていくつもりです。&lt;/p&gt;
+&lt;h2&gt;前の記事をコピーして書く&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/05/24/1/879ec85c-1fd6-4a0c-940f-b9c44c11adb4.png" alt="ss 2015-05-24 at 23.06.28.png (374.8 kB)"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;esaでは、前に書いた記事をコピーして新しい記事を書くことができます。&lt;/li&gt;
+&lt;li&gt;記事ページのタイトルの右側のコピーアイコンをクリックすると、コピー元の投稿が入った状態で新規投稿画面が立ち上がります。&lt;/li&gt;
+&lt;li&gt;その時、日付けが入ったフォーマットのタイトルであれば、今日の日付けに自動的に置き換えてくれます（下図参照）&lt;/li&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://camo.githubusercontent.com/3dac684cb3ea97b7afeccb86924bd48270113a52/68747470733a2f2f696d672e6573612e696f2f75706c6f6164732f70726f64756374696f6e2f70696374757265732f312f39382f696d6167652f62316165613332613336393764336665363239363930643065323165323431352e6a7067"&gt;&lt;img src="https://camo.githubusercontent.com/3dac684cb3ea97b7afeccb86924bd48270113a52/68747470733a2f2f696d672e6573612e696f2f75706c6f6164732f70726f64756374696f6e2f70696374757265732f312f39382f696d6167652f62316165613332613336393764336665363239363930643065323165323431352e6a7067" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;APIについて、詳しくはこちらのドキュメントを御覧ください&lt;/p&gt;
+&lt;h2&gt;記事タイトルについて&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a target="_blank" href="/posts/102"&gt;dev/api/v1 - docs.esa.io&lt;/a&gt; &lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;タイトルの中で &lt;code&gt;hoge/&lt;/code&gt; で区切ると、その部分をカテゴリーとして扱うことができます。
 
-&lt;p&gt;「ぜひこのAPIを追加してくれ！」や「このパラメータも欲しいんだけど」みたいなことがありましたら、ぜひ右下のFeedback formからお知らせ下さい。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例）&lt;code&gt;help/記事の書き方&lt;/code&gt; というタイトルでは、&lt;code&gt;help&lt;/code&gt; カテゴリーの中に記事が格納されます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;また、タイトルの中で &lt;code&gt;#hoge&lt;/code&gt; とすると、タグになります。&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;また、Rubyのesa API clientも先日から公開していますのでissueやpull-requestをお待ちしております。&lt;/p&gt;
+&lt;h2&gt;
+&lt;code&gt;Save as WIP&lt;/code&gt; &lt;code&gt;Ship it!&lt;/code&gt; ボタンについて&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a target="_blank" href="https://github.com/esaio/esa-ruby"&gt;esaio/esa-ruby&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/pictures/1/92/image/806df375700f7cc1f04c8ef9e8806126.jpg" alt="esa-man.jpg"&gt;&lt;/p&gt;
 
-&lt;p&gt;このgemの使い方はこんな感じです。&lt;/p&gt;
+&lt;h3&gt;
+&lt;code&gt;Save as WIP&lt;/code&gt; ボタン&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt; 投稿画面、編集画面に &lt;code&gt;Save as WIP&lt;/code&gt; というボタンがあります。これを押すと、「書き途中だけど保存して公開する」という意味になります。
+
+&lt;ul&gt;
+&lt;li&gt;WIP = Work in Progress （作業中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;Save as WIP&lt;/code&gt; で保存された記事は、一覧画面などの投稿タイトルに &lt;code&gt;WIP&lt;/code&gt; と付いてグレーアウトした状態になります。&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;Save as WIP&lt;/code&gt; で保存された時は、Webhookの更新通知は飛びません。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;
+&lt;code&gt;Ship It!&lt;/code&gt; ボタン&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ドキュメントが大体完成に近づいたところで &lt;code&gt;Ship It!&lt;/code&gt;ボタンを押すと、Webhookの更新通知が飛び、チームの人が見にきてくれます。&lt;/li&gt;
+&lt;li&gt;それぞれの更新は revision に記録されていて、画面右上から差分も見ることができます。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;記事を一時保存する&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;⌘ + s&lt;/code&gt; ボタンを押すと、記事を一時保存できます。&lt;br&gt;
+参考: &lt;a target="_blank" href="https://docs.esa.io/posts/28"&gt;release_note/2014/12/10/⌘+Sで一時保存 - docs.esa.io&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>投稿テンプレート</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/7.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/7.html</id>
+    <published>2015-11-13T00:40:21+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
+    <author>
+      <name>esa team</name>
+    </author>
+    <content type="html">&lt;h2&gt;テンプレートを使う&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;テンプレートは投稿画面の左上から選択することができます。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/pictures/1/421/image/cb7a67f21c94c557f2fce628ca89d3ce.png" alt="スクリーンショット 2014-10-25 12.27.45.png"&gt;&lt;/p&gt;
+
+&lt;h3&gt;応用: テンプレートが適用された状態で新規投稿画面を開く&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;https://[チーム名].esa.io/posts/new?template_post_id=[記事番号]&lt;/code&gt; にアクセスすると、その記事番号のテンプレートが適用された状態で新規投稿画面を開くことができます。&lt;/p&gt;
+
+&lt;p&gt;この機能はchatbotを使う場合や、READMEにリンクを埋め込む場合に便利です&lt;/p&gt;
 &lt;div class="code-block"&gt;
 &lt;div class="code-filename"&gt;
-&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;ruby&lt;/div&gt;
-&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;'esa'&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Esa&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;access_token: &lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;access_token&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;current_team: &lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;teams&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;team&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/bar&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;posts&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foo/posts&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;posts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;q: &lt;/span&gt;&lt;span class="s1"&gt;'in:help'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foo/posts?q=in%3Ahelp&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;current_team&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'foobar'&lt;/span&gt;
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; GET /v1/teams/foobar/posts/1&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;create_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; POST /v1/teams/foobar/posts&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;update_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; PATCH /v1/teams/foobar/posts/1&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;delete_post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; DELETE /v1/teams/foobar/posts/1&lt;/span&gt;
+&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;chatbot&lt;/div&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;@here 日報書きましょう！ https://example.esa.io/posts/new?template_post_id=3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class="code-block"&gt;
+&lt;div class="code-filename"&gt;
+&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;README.md&lt;/div&gt;
+&lt;pre class="highlight markdown"&gt;&lt;code&gt;...
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;議事録を書く&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="sx"&gt;/posts/new?template_post_id=5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+...
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;h1&gt;所感&lt;/h1&gt;
+&lt;h2&gt;テンプレートを作る・カスタマイズする&lt;/h2&gt;
 
-&lt;p&gt;APIを公開することで、esaの使い方の可能性が広がるのが楽しみです。&lt;br&gt;
-「うちのチームではこういうの作ったぜ！」という事例を是非お知らせください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;esaでは、日報や障害報告などの投稿テンプレートが数種類デフォルトで用意されているほか、自分でカスタマイズしたり新たに作成したりすることができます。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;templates/&lt;/code&gt; カテゴリ配下に置かれた(ShipIt状態の)記事は全て、投稿テンプレートとして投稿画面から選択して使うことができます。&lt;/p&gt;
 
-&lt;p&gt;APIのprivate βにご協力して頂いた皆様ありがとうございました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;code&gt;Users/[screen_name]/templates/&lt;/code&gt; カテゴリ配下に記事を置くと、そのscreen_nameの人だけに表示されるテンプレートになります
+
+&lt;ul&gt;
+&lt;li&gt;例: &lt;code&gt;Users/fukayatsu/日報/%{Year}/%{month}/%{day}/TITLE&lt;/code&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;テンプレート変数&lt;/h2&gt;
+
+&lt;p&gt;テンプレートでは以下の変数を使うことが出来ます&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;変数&lt;/th&gt;
+&lt;th&gt;効果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{year}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の年 (e.g. 14)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Year}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の年 (e.g. 2014)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{jyear}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の年度 (e.g. H26)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Jyear}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の年度 (e.g. 平成26)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{jfyear}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の会計年度(4月始まり) (e.g. H25)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Jfyear}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の会計年度(4月始まり) (e.g. 平成25)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{month}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の月 (e.g. 06)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Month}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の月 (e.g. Jun)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Monthname}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の月 (e.g. June)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Weekday}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の曜日 (e.g. Saturday)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{Week}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の曜日 (e.g. Sat)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{weekday}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の曜日 (e.g. 土曜日)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{week}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の曜日 (e.g. 土)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{cweek}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;(当月における)暦週 (e.g. 4)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{cWeek}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;暦週 (e.g. 25)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{day}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;本日の日 (e.g. 03)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;code&gt;%{me}&lt;/code&gt; or &lt;code&gt;%{screen_name}&lt;/code&gt;
+&lt;/td&gt;
+&lt;td&gt;自分の screen name (e.g. ken_c_lo)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{name}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;自分の名前 (e.g. Taeko Akatsuka)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%{team}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;チーム名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content>
+  </entry>
+  <entry>
+    <title>ご利用料金について</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/74.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/74.html</id>
+    <published>2015-11-11T14:03:12+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
+    <author>
+      <name>esa team</name>
+    </author>
+    <content type="html">&lt;p&gt;詳しくはこちらもご覧下さい&lt;br&gt;
+&lt;a target="_blank" href="https://esa.io/pricing"&gt;Pricing - esa.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;お申込み後2ヶ月はフリートライアル期間&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;チーム作成後、2ヶ月後の月末までは無料でお試しいただけます。&lt;/li&gt;
+&lt;li&gt;例えば1月中にチームが作成された場合、3月末まで無料です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;フリートライアル期間終了後、毎月1人あたり500円の料金が発生します&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;料金は税込みです。&lt;/li&gt;
+&lt;li&gt;フリートライアル終了日の翌日から料金が発生します。&lt;/li&gt;
+&lt;li&gt;毎月1日に、前月の利用状況に応じてご利用料金をお支払い頂きます。&lt;/li&gt;
+&lt;li&gt;チームのご利用料金は、ユーザーごとの日割りの利用料金の合計で算出されます。&lt;/li&gt;
+&lt;li&gt;クレジットカードでのお支払いになります。&lt;/li&gt;
+&lt;li&gt;チーム及びユーザの削除については、 &lt;a target="_blank" href="https://docs.esa.io/posts/42"&gt;こちらをご確認ください&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;料金についてのFAQ&lt;/h1&gt;
+
+&lt;h3&gt;Q: クレジットカード情報はどこから登録するのですか？&lt;/h3&gt;
+
+&lt;p&gt;各チームのオーナーが、チーム管理画面の"Billing" タブ内にあるクレジットカード情報登録フォームから登録を行ってください。&lt;/p&gt;
+
+&lt;h3&gt;Q: クレジットカード情報を登録しても安全なのでしょうか？&lt;/h3&gt;
+
+&lt;p&gt;esa.io では、クレジットカード決済代行サービスとして&lt;a target="_blank" href="https://webpay.jp/"&gt;WebPay&lt;/a&gt;を利用しています。&lt;br&gt;
+ご登録いただいたクレジットカード情報について、当社はカード番号の下4ケタと有効期限（管理画面での表示確認用に利用）以外の情報を閲覧・利用・保持することはありません。&lt;/p&gt;
+
+&lt;p&gt;参考: &lt;a target="_blank" href="https://webpay.jp/security"&gt;セキュリティへの取り組み | WebPay: 開発者向けクレジットカード決済サービス&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Q: フリートライアル期間終了後、クレジットカード請求は毎月どのように行われるのでしょうか？&lt;/h3&gt;
+
+&lt;p&gt;フリートライアル期間終了後の翌月から有料期間となり、さらに翌月以降の毎月1日に、前月のご利用状況に応じて自動的にクレジットカードでのご請求が行われます。&lt;/p&gt;
+
+&lt;h3&gt;Q: クレジットカード情報を登録しないとどうなるのでしょうか？&lt;/h3&gt;
+
+&lt;p&gt;請求日までにクレジットカード情報が登録されない場合、または何らかの理由でご請求が不可能だった場合には、1ヶ月の猶予期間を経てサービスが利用できなくなります。猶予期間内にクレジットカード情報を登録していただければ、サービスの継続利用が可能です。&lt;br&gt;
+フリートライアル後の継続利用をご希望されない場合は、クレジットカード登録をせずそのままにしておいていただければ料金のご請求はいたしません。&lt;/p&gt;
+
+&lt;h3&gt;Q: 1ヶ月のうち1日しか利用していないユーザーも、1ヶ月分の料金が請求されるの？&lt;/h3&gt;
+
+&lt;p&gt;esa.ioではチームに対して、ユーザーの所属状況に応じて日割りで料金を算出しています。例えば1ヶ月のうち1日だけ所属したユーザーについては、1ヶ月分の料金をその月の日数で割った1日分の料金での請求になります。&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>スクリプトタグの埋め込み</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/43.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/43.html</id>
+    <published>2015-11-11T07:14:13+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
+    <author>
+      <name>esa team</name>
+    </author>
+    <content type="html">&lt;p&gt;esaではclosedなチームに限り、投稿にスクリプトタグ等を埋め込むことができます。&lt;br&gt;
+※ docs.esa.io は例外的に、管理者であれば可能&lt;/p&gt;
+
+&lt;p&gt;例えばこのようにtweetを埋め込む事ができます。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;&amp;lt;blockquote class="twitter-tweet" lang="en"&amp;gt;&amp;lt;p&amp;gt;ｳﾒｺﾐ &amp;lt;a href="https://twitter.com/hashtag/%EF%BE%84%EF%BE%89%EF%BD%BA%EF%BE%84?src=hash"&amp;gt;#ﾄﾉｺﾄ&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;amp;mdash; esa_io (@esa_io) &amp;lt;a href="https://twitter.com/esa_io/status/552840845703905280"&amp;gt;January 7, 2015&amp;lt;/a&amp;gt;&amp;lt;/blockquote&amp;gt;
+&amp;lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;
+&lt;p&gt;ｳﾒｺﾐ &lt;a href="https://twitter.com/hashtag/%EF%BE%84%EF%BE%89%EF%BD%BA%EF%BE%84?src=hash"&gt;#ﾄﾉｺﾄ&lt;/a&gt;&lt;/p&gt;— esa_io (@esa_io) &lt;a href="https://twitter.com/esa_io/status/552840845703905280"&gt;January 7, 2015&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content>
+  </entry>
+  <entry>
+    <title>Markdown記法</title>
+    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/49.html"/>
+    <id>http://blog-test.fukayatsu.com/posts/49.html</id>
+    <published>2015-11-11T05:17:02+00:00</published>
+    <updated>2015-12-15T06:18:01+00:00</updated>
+    <author>
+      <name>esa team</name>
+    </author>
+    <content type="html">&lt;p&gt;esa.io の Markdown 記法のうち、よく使うものを紹介します&lt;/p&gt;
+
+&lt;h1&gt;見出し&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt; を行頭に付けることで、見出しになります。 &lt;code&gt;#&lt;/code&gt; の数と見出しの階層が対応します。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;# これは h1 タグです
+## これは h2 タグです
+### これは h3 タグです
+#### これは h4 タグです
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
+
+&lt;h1&gt;これは h1 タグです&lt;/h1&gt;
+
+&lt;h2&gt;これは h2 タグです&lt;/h2&gt;
+
+&lt;h3&gt;これは h3 タグです&lt;/h3&gt;
+
+&lt;h4&gt;これは h4 タグです&lt;/h4&gt;
+
+&lt;h1&gt;箇条書き&lt;/h1&gt;
+
+&lt;p&gt;箇条書きリストは、 &lt;code&gt;-&lt;/code&gt; &lt;code&gt;*&lt;/code&gt; のどれかを入力し、半角スペースまたはタブを挿入します。&lt;br&gt;
+半角スペースまたはタブを行頭に挿入すると、箇条書きが入れ子になります。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;-  リスト 1
+-  リスト 2
+    -  リスト 2a
+         -  リスト 2a1
+    -  リスト 2b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; リスト 1&lt;/li&gt;
+&lt;li&gt; リスト 2
+
+&lt;ul&gt;
+&lt;li&gt; リスト 2a
+
+&lt;ul&gt;
+&lt;li&gt; リスト 2a1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt; リスト 2b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;番号付きリスト&lt;/h1&gt;
+
+&lt;p&gt;番号付きリストは、 &lt;code&gt;&amp;lt;数字&amp;gt;.&lt;/code&gt;を入力し、半角スペースまたはタブを挿入します。どの数字を入力しても、番号付けは自動で行われます。&lt;br&gt;
+半角スペースまたはタブを行頭に挿入すると、リストが入れ子になります。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;1. foo
+1. bar
+1. baz
+    1. aaa
+    2. bbb
+    3. ccc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;foo&lt;/li&gt;
+&lt;li&gt;bar&lt;/li&gt;
+&lt;li&gt;baz
+
+&lt;ol&gt;
+&lt;li&gt;aaa&lt;/li&gt;
+&lt;li&gt;bbb&lt;/li&gt;
+&lt;li&gt;ccc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1&gt;リンク&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;[表示テキスト](URL)&lt;/code&gt; でリンクになります&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;[esa.io (\\( ⁰⊖⁰)/) ](https://esa.io)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓ &lt;br&gt;
+&lt;a target="_blank" href="https://esa.io"&gt;esa.io (\( ⁰⊖⁰)/) &lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;画像&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;![代替テキスト](画像URL)&lt;/code&gt; で画像が貼れます&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;![patapata (\\( ⁰⊖⁰)/)](https://img.esa.io/uploads/production/pictures/105/3203/image/378bedb1186931ecfa019e92dafc1692.gif)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/pictures/105/3203/image/378bedb1186931ecfa019e92dafc1692.gif" alt="patapata (\\( ⁰⊖⁰)/)"&gt;&lt;/p&gt;
+
+&lt;h1&gt;引用&lt;/h1&gt;
+
+&lt;p&gt;行頭に &lt;code&gt;&amp;gt;&lt;/code&gt; を挿入すると引用（blockquote）として表示できます。 &lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;esa.io にはこのように書いてあります。
+
+&amp;gt; esa.io は「情報を育てる」という視点で作られた、 
+&amp;gt; 小さな開発チームのためのドキュメント共有サービスです。
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;br&gt;
+esa.io にはこのように書いてあります。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;esa.io は「情報を育てる」という視点で作られた、 &lt;br&gt;
+小さな開発チームのためのドキュメント共有サービスです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;強調（太字）&lt;/h1&gt;
+
+&lt;p&gt;2つの &lt;code&gt;*&lt;/code&gt; または、&lt;code&gt;_&lt;/code&gt;で文言を囲むと、強調（太字・strong）が表現できます。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;それは私の**エサ**です。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;br&gt;
+それは私の&lt;strong&gt;エサ&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;h1&gt;訂正線&lt;/h1&gt;
+
+&lt;p&gt;2つの &lt;code&gt;~&lt;/code&gt;で文言を囲むと、訂正線（&lt;code&gt;del&lt;/code&gt;）が表現できます。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;それは~~いぬ~~トリのエサです。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;br&gt;
+それは&lt;del&gt;いぬ&lt;/del&gt;トリのエサです。&lt;/p&gt;
+
+&lt;h1&gt;罫線&lt;/h1&gt;
+
+&lt;p&gt;3つ以上の &lt;code&gt;*&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; と半角スペースのみの行は、罫線 (&lt;code&gt;hr&lt;/code&gt;) として表現できます。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;本文終わり。
+
+---
+
+Enjoy! (\\( ⁰⊖⁰)/) from esa.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;br&gt;
+本文終わり。&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Enjoy! (\( ⁰⊖⁰)/)&lt;/p&gt;
 
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>スライドのデザインを少し整えました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/2015/06/10/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%92%E5%B0%91%E3%81%97%E6%95%B4%E3%81%88%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-16T08:08:08+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
-    <author>
-      <name>esa team</name>
-    </author>
-    <content type="html">&lt;p&gt;あああ &lt;img class="emoji" title=":esa:" alt=":esa:" src="/images/emoji/esa.png" height="20" width="20" align="absmiddle"&gt; &lt;img class="emoji" title=":sushi:" alt=":sushi:" src="/images/emoji/unicode/1f363.png" height="20" width="20" align="absmiddle"&gt; いいい&lt;/p&gt;
+&lt;h1&gt;コード&lt;/h1&gt;
+
+&lt;h2&gt;インライン表示&lt;/h2&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;インラインのコードは、`&amp;lt;code&amp;gt;` タグです。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;br&gt;
+インラインのコードは、&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; タグです。&lt;/p&gt;
+
+&lt;h2&gt;コードブロック表示&lt;/h2&gt;
+
+&lt;pre&gt;
+```
+$ git push origin master
+```
+&lt;/pre&gt;
+
+&lt;p&gt;↓&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;シンタックスハイライト&lt;/h2&gt;
+
+&lt;pre&gt;
+```ruby
+def esa
+  puts "(\\( ⁰⊖⁰)/)"
+end
+```
+&lt;/pre&gt;
+
+&lt;p&gt;↓&lt;/p&gt;
 &lt;div class="code-block"&gt;
 &lt;div class="code-filename"&gt;
 &lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;ruby&lt;/div&gt;
-&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hoge&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;':sushi:'&lt;/span&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;esa&lt;/span&gt;
+  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;"(&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;( ⁰⊖⁰)/)"&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
+&lt;p&gt;※現在 esaでは &lt;a target="_blank" href="https://github.com/jneen/rouge"&gt;rouge&lt;/a&gt;というライブラリを使用しております。対応言語一覧は&lt;a target="_blank" href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers"&gt;こちら&lt;/a&gt;です。&lt;/p&gt;
 
-&lt;h2&gt;Before&lt;/h2&gt;
+&lt;h2&gt;ファイル名表示&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/10/2/600fa14a-9bc8-4bb8-8e65-32242425ebe0.png" alt="スクリーンショット 2015-06-10 22.35.27.png (197.1 kB)"&gt;&lt;/p&gt;
+&lt;pre&gt;
 
-&lt;p&gt;はー、ひどい…( ⁰⊖⁰)&lt;/p&gt;
+```ruby:Gemfile
+gem 'rails'
+gem 'esa'
+```
 
-&lt;h2&gt;After&lt;/h2&gt;
+```ruby:tori.rb
+puts '(\( ⁰⊖⁰)/)'
+```
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/10/2/849e279a-7884-40b0-8929-9911bf93d84c.png" alt="ss 2015-06-10 22.33.45.png (205.1 kB)"&gt;&lt;/p&gt;
+&lt;/pre&gt;
+&lt;div class="code-block"&gt;
+&lt;div class="code-filename"&gt;
+&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;Gemfile&lt;/div&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'rails'&lt;/span&gt;
+&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'esa'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class="code-block"&gt;
+&lt;div class="code-filename"&gt;
+&lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;tori.rb&lt;/div&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;'(\( ⁰⊖⁰)/)'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;数式&lt;/h2&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;```math
+ e^{i \pi} = -1 
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class="code-block"&gt;&lt;div class="mathjax"&gt;$$  e^{i \pi} = -1 
+ $$&lt;/div&gt;&lt;/div&gt;&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$a = \\{1, 2, 3\\}$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;$a = \{1, 2, 3\}$&lt;/p&gt;
 
-&lt;h2&gt;変更点&lt;/h2&gt;
+&lt;h1&gt;テーブル&lt;/h1&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;| アイテム名 | 値段 |
+| ------------ | ------------- |
+| いぬのえさ | 250円 |
+| とりのえさ | 128円 |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;アイテム名&lt;/th&gt;
+&lt;th&gt;値段&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;いぬのえさ&lt;/td&gt;
+&lt;td&gt;250円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;とりのえさ&lt;/td&gt;
+&lt;td&gt;128円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img class="emoji" title=":bulb:" alt=":bulb:" src="/images/emoji/unicode/1f4a1.png" height="20" width="20" align="absmiddle"&gt;  参考:  &lt;a target="_blank" href="https://docs.esa.io/posts/54"&gt;release_note/2015/01/24/テーブル記法を書きやすくしました - docs.esa.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;タスクリスト&lt;/h1&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;- [ ] TODO
+    - [x] TODO
+- [x] DONE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;リストのマージンを調整&lt;/li&gt;
-&lt;li&gt;リストの行間を調整&lt;/li&gt;
-&lt;li&gt;普通の文章（&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;） を左揃えに&lt;/li&gt;
-&lt;li&gt;普通の文章（&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;） の行間を調整&lt;/li&gt;
+&lt;li&gt;[ ] TODO
+
+&lt;ul&gt;
+&lt;li&gt;[ ] TODO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[x] DONE&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Table&lt;/h2&gt;
+&lt;h1&gt;絵文字&lt;/h1&gt;
 
-&lt;p&gt;表のデザインも整えました&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:emoji:&lt;/code&gt; で、絵文字が表示できます。詳しくは&lt;a target="_blank" href="http://www.emoji-cheat-sheet.com/"&gt;Emoji cheat sheet&lt;/a&gt; 参照下さい &lt;img class="emoji" title=":sushi:" alt=":sushi:" src="/images/emoji/unicode/1f363.png" height="20" width="20" align="absmiddle"&gt; &lt;img class="emoji" title=":hatched_chick:" alt=":hatched_chick:" src="/images/emoji/unicode/1f425.png" height="20" width="20" align="absmiddle"&gt; &lt;img class="emoji" title=":bird:" alt=":bird:" src="/images/emoji/unicode/1f426.png" height="20" width="20" align="absmiddle"&gt;&lt;br&gt;
+絵文字は投稿タイトルや見出しでも利用できます。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/10/2/266da0ae-ba66-465f-8a90-9ac316975848.png" alt="ss 2015-06-10 22.25.40.png (315.8 kB)"&gt;&lt;/p&gt;
+&lt;h1&gt;メンション&lt;/h1&gt;
 
-&lt;h2&gt;ちなみに&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;@USERNAME&lt;/code&gt; でユーザーに対してメンションが送れます。メンションが送られると画面右上の通知欄から通知されます。&lt;br&gt;
+&lt;code&gt;@&lt;/code&gt;を入力すると、チーム内のメンバーがサジェストされます。&lt;/p&gt;
 
-&lt;p&gt;記事タイトル末尾の3番目のアイコンを押すと、記事をスライドとして表示することができます。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/pictures/105/3222/image/e89349da4600b6f4967462773d803384.png" alt="スクリーンショット 2015-01-18 21.40.14.png"&gt;  &lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/10/2/cbfcd183-5552-4d90-aac3-1855e2c195d0.png" alt="ss 2015-06-10 22.45.45.png (71.0 kB)"&gt;&lt;/p&gt;
+&lt;h1&gt;チーム内投稿へのリンク&lt;/h1&gt;
 
-&lt;h1&gt;所感&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt; から入力すると、チーム内の投稿がサジェストされ、楽にリンクが投稿できます。&lt;/p&gt;
 
-&lt;p&gt;今日は取引先の会社さんで打ち合わせをしたあと、まだ夕方なのに気づいたらフラフラと&lt;a target="_blank" href="http://bondy.co.jp/web/"&gt;ボンディ&lt;/a&gt;に吸い寄せられており、チーズカレーを食べていました。&lt;br&gt;
-おいしかったけど中途半端な時間に食べたからか、少し胃もたれしています &lt;img class="emoji" title=":curry:" alt=":curry:" src="/images/emoji/unicode/1f35b.png" height="20" width="20" align="absmiddle"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/pictures/105/3223/image/84cc4697e5ffb7110f31597fff1a2fb8.png" alt="スクリーンショット 2015-01-18 21.44.12.png"&gt;&lt;/p&gt;
 
-&lt;p&gt;そして相変わらずイカをやっています くコ:彡 なかなかうまくならぬ…&lt;/p&gt;
+&lt;h1&gt;エスケープ&lt;/h1&gt;
 
-&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;\&lt;/code&gt; でMakdownで使われる記号がエスケープできます。&lt;/p&gt;
+&lt;div class="code-block"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;\# ほげ
 
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt;&lt;/p&gt;
+\- hoge
 
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>コメントのタスクリストを簡単に更新できるようにしました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/2015/06/03/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%9B%B4%E6%96%B0%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-16T08:07:59+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
-    <author>
-      <name>esa team</name>
-    </author>
-    <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
+\\hoge
 
-&lt;p&gt;今までコメント中のタスクリストはコメント全体を編集しないとチェック状態を変更することができませんでしたが、記事中のタスクリストと同じくチェックボックスの操作で更新できるようになりました。&lt;/p&gt;
+(\\( ⁰⊖⁰)/)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;↓&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/03/1/5e5cab65-cc70-4d89-935a-f5534ff91b4c.gif" alt="comment-task.gif (137.0 kB)"&gt;&lt;/p&gt;
+&lt;p&gt;# ほげ&lt;/p&gt;
 
-&lt;h1&gt;所感&lt;/h1&gt;
+&lt;p&gt;- hoge&lt;/p&gt;
 
-&lt;p&gt;久しぶりに &lt;img class="emoji" title=":umbrella:" alt=":umbrella:" src="/images/emoji/unicode/2614.png" height="20" width="20" align="absmiddle"&gt; ですね。そして西日本は梅雨入りとのことです。&lt;br&gt;
-ジメジメしているのは苦手なので、早く夏になってほしいです。&lt;/p&gt;
+&lt;p&gt;\hoge&lt;/p&gt;
 
-&lt;hr&gt;
+&lt;p&gt;(\( ⁰⊖⁰)/)&lt;/p&gt;
 
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
+&lt;h1&gt;脚注記法&lt;/h1&gt;
 
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>脚注記法に対応しました :christmas_tree: :santa:</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2014/12/24/%E8%84%9A%E6%B3%A8%E8%A8%98%E6%B3%95%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%20:christmas_tree:%20:santa:.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/2014/12/24/%E8%84%9A%E6%B3%A8%E8%A8%98%E6%B3%95%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%20:christmas_tree:%20:santa:.html</id>
-    <published>2015-06-10T01:47:37+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
-    <author>
-      <name>esa team</name>
-    </author>
-    <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;脚注を付けたい場所にこのように書きます→ [^1]&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;markdownの設定を見なおして、脚注記法とclosedなチーム内でのhtmlの埋め込みを有効にしました。 &lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[^1]: ここに脚注の内容を書きます&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1&gt;所感&lt;/h1&gt;
-
-&lt;p&gt;世の中はクリスマスムードですが、あまり実感が無いです &lt;img class="emoji" title=":dash:" alt=":dash:" src="/images/emoji/unicode/1f4a8.png" height="20" width="20" align="absmiddle"&gt; &lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;なお、ウィッシュリストはこちらから受け付けております #ﾄﾉｺﾄ&lt;br&gt;
-&lt;a target="_blank" href="http://www.amazon.co.jp/registry/wishlist/WNWEGOU2X5FS"&gt;http://www.amazon.co.jp/registry/wishlist/WNWEGOU2X5FS&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class="footnotes"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-
-&lt;li id="fn1"&gt;
-&lt;p&gt;&lt;a target="_blank" href="https://docs.esa.io/posts/38.md"&gt;https://docs.esa.io/posts/38.md&lt;/a&gt; を見ていただけると、実際の書き方がわかりやすいと思います。 &lt;a href="#fnref1" rev="footnote"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;li id="fn2"&gt;
-&lt;p&gt;tweetを埋め込んだりできます。 &lt;a href="#fnref2" rev="footnote"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;/ol&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>タグで記事のstockとflowの指定ができるようになりました</title>
-    <link rel="alternate" href="http://blog-test.fukayatsu.com/posts/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html"/>
-    <id>http://blog-test.fukayatsu.com/posts/2015/06/02/%E3%82%BF%E3%82%B0%E3%81%A7%E8%A8%98%E4%BA%8B%E3%81%AEstock%E3%81%A8flow%E3%81%AE%E6%8C%87%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html</id>
-    <published>2015-06-08T02:19:05+00:00</published>
-    <updated>2015-12-14T08:37:28+00:00</updated>
-    <author>
-      <name>esa team</name>
-    </author>
-    <content type="html">&lt;h1&gt;今回のリリース内容&lt;/h1&gt;
-
-&lt;p&gt;記事タイトルに &lt;code&gt;#stock&lt;/code&gt; や &lt;code&gt;#flow&lt;/code&gt; というタグを追加することで、記事をstockとflowに分類することができるようになりました。&lt;/p&gt;
-
-&lt;p&gt;これまでも記事に日付が入っていればflow型の記事、それ以外はstock型の記事として扱われていましたが、タグによってより明示的に分類することができます。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a target="_blank" href="https://docs.esa.io/posts/31"&gt;release_note/2014/12/13/検索結果の絞り込み(Stock or Flow)&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;※ 記事に日付とタグが両方指定された場合はタグが優先されます&lt;br&gt;
-※ &lt;code&gt;#flow&lt;/code&gt; と &lt;code&gt;#stock&lt;/code&gt; の両方のタグがついた場合はflowが優先されます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://img.esa.io/uploads/production/attachments/105/2015/06/02/1/84884716-d9cd-49d4-b10b-9e3dc5108ec0.png" alt="ss 2015-06-02 at 0.06.49.png (274.2 kB)"&gt;&lt;/p&gt;
-
-&lt;h1&gt;所感&lt;/h1&gt;
-
-&lt;p&gt;なぜかとてもゴーヤが食べたいのですが、近くのスーパーにはまだ売っていないようでした。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;[ProTip] &lt;a target="_blank" href="/posts/73"&gt;Webhookでdocs.esa.ioの更新通知を受け取れるようになりました!&lt;/a&gt; &lt;/p&gt;
-
-&lt;p&gt;Enjoy "(\( ⁰⊖⁰)/)"&lt;br&gt;
-&lt;a target="_blank" href="https://esa.io"&gt;https://esa.io&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;img class="emoji" title=":bulb:" alt=":bulb:" src="/images/emoji/unicode/1f4a1.png" height="20" width="20" align="absmiddle"&gt;  参考: &lt;a target="_blank" href="/posts/38"&gt;#38: release_note/2014/12/24/脚注記法に対応しました &lt;img class="emoji" title=":christmas_tree:" alt=":christmas_tree:" src="/images/emoji/unicode/1f384.png" height="20" width="20" align="absmiddle"&gt; &lt;img class="emoji" title=":santa:" alt=":santa:" src="/images/emoji/unicode/1f385.png" height="20" width="20" align="absmiddle"&gt;&lt;/a&gt; &lt;/p&gt;</content>
   </entry>
 </feed>
