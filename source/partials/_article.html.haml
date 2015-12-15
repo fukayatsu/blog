@@ -1,6 +1,6 @@
 %li.post-list
   %ul.categories
-    - categories = article.data.category.split('/')
+    - categories = article.data.category.to_s.split('/')
     - categories.each.with_index do |category, i|
       %li= link_to category, category_path(categories[0..i].join('/'))
   %h2.title

@@ -8,9 +8,9 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = 'blog'
 
-  blog.permalink = 'posts/{+title}'
+  blog.permalink = 'posts/{number}.html'
   # Matcher for blog source files
-  blog.sources = 'posts/{+title}'
+  blog.sources = 'posts/{number}.html'
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tag.html'
   blog.categorylink = 'categories/{category}.html'
