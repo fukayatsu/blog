@@ -27,6 +27,9 @@ activate :blog do |blog|
   blog.page_link = 'page/{num}'
 end
 
+activate :directory_indexes
+set :trailing_slash, false
+
 ignore '/layout/article.html'
 
 page '/feed.xml', layout: false
