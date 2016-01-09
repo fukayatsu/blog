@@ -13,8 +13,8 @@ activate :blog do |blog|
   blog.sources = 'posts/{number}.html'
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tag.html'
-  blog.categorylink = 'categories/{category}.html'
-  blog.category_template = 'category.html'
+  # blog.categorylink = 'categories/{category}.html'
+  # blog.category_template = 'category.html'
   blog.layout = 'layout/article'
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
@@ -45,9 +45,9 @@ set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  config.output_style = :compact
-end
+# compass_config do |config|
+#   config.output_style = :compact
+# end
 
 ###
 # Page options, layouts, aliases and proxies
