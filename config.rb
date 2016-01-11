@@ -13,8 +13,8 @@ activate :blog do |blog|
   blog.sources = 'posts/{number}.html'
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tag.html'
-  # blog.categorylink = 'categories/{category}.html'
-  # blog.category_template = 'category.html'
+  blog.categorylink = 'categories/{category}.html'
+  blog.category_template = 'category.html'
   blog.layout = 'layout/article'
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
@@ -29,8 +29,6 @@ end
 
 activate :directory_indexes
 set :trailing_slash, false
-
-ignore '/layout/article.html'
 
 page '/feed.xml', layout: false
 
