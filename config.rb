@@ -30,8 +30,6 @@ end
 activate :directory_indexes
 set :trailing_slash, false
 
-ignore '/layout/article.html'
-
 page '/feed.xml', layout: false
 
 set :site_url, 'http://blog-test.fukayatsu.com/'
@@ -45,9 +43,9 @@ set :site_subtitle, 'Expertise Sharing Archives for motivated teams.'
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  config.output_style = :compact
-end
+# compass_config do |config|
+#   config.output_style = :compact
+# end
 
 ###
 # Page options, layouts, aliases and proxies

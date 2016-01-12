@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'middleman'
-gem 'middleman-blog', github: 'fukayatsu/middleman-blog', branch: 'esa-ext'
+gem 'middleman-blog', github: 'fukayatsu/middleman-blog', branch: 'v4-esa-ext'
 gem 'middleman-livereload'
 
 gem 'html-pipeline'
@@ -15,6 +15,8 @@ gem 'sanitize'
 gem 'bootstrap-sass', require: false
 gem 'jquery-middleman', require: false
 gem 'font-awesome-middleman', require: false
+gem 'middleman-compass'
+gem 'middleman-sprockets', github: 'middleman/middleman-sprockets'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
